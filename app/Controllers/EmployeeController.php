@@ -8,7 +8,7 @@ class EmployeeController extends BaseController
 {
     public function index(){
         $model = new EmployeeModel();
-        $data['employee'] = $model->findAll();
+        $data['employee'] = $model-> orderBy('created_at', 'DESC')->findAll();
 
         return view('employee/index', $data);
     }
@@ -16,6 +16,19 @@ class EmployeeController extends BaseController
         return view('employee/create');
     }
     public function store(){
+
+        $rules = [
+            'name' => 'required|min_length[2]|max_length[30]',
+            'email' => 'required|valid_email|is_unique[employee.email]',
+            'phone' => 'required|numeric|max_length[10]',
+            'designation' => 'required|max_length[50]',
+            'salary' => 'required|numeric|greater_than[0]'
+        ];
+
+        if(!$this->validate($rules)){
+            return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
+        }
+
         $model = new EmployeeModel();
         $data = [
             'name' => $this->request->getPost('name'),
@@ -58,5 +71,11 @@ class EmployeeController extends BaseController
         $employee->delete($id);
         return redirect()->to(base_url('employee'))->with('status','Employee Deleted Successfully');
 
+    }
+
+    public function viewUser($id){
+        $model = new EmployeeModel();
+        $data['employee'] = $model->find($id);
+        return view('employee/view_emp', $data);
     }
 }

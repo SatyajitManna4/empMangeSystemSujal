@@ -46,7 +46,7 @@
                             <option value="inactive">Inactive</option>
                         </select>
                     </div>
-                    <button type="submit" class="btn btn-success">Add Employee</button>
+                    <button type="submit" class="btn btn-success">Update Employee</button>
                 </form>
             </div>
         </div>

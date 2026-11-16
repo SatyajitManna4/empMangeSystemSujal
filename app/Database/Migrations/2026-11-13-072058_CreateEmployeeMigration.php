@@ -45,7 +45,7 @@ class CreateEmployeeMigration extends Migration
             ],
             'access_level' =>[
                 'type' => 'ENUM',
-                'constraint' => ['admin', 'manager', 'employee'],
+                'constraint' => ['admin', 'hr', 'employee'],
                 'null' => false
             ],
             'status' =>[

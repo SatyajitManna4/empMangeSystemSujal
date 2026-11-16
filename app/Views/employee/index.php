@@ -7,7 +7,7 @@
     <div class="card">
         <div class="card-header d-flex justify-content-between align-items-center">
             <h1>Employee Management Portal</h1>
-            <a href="<?= base_url('employee-add') ?>" class="btn btn-primary float-end">Add Employee</a>
+            <a href="<?= base_url('employee-add') ?>" class="btn btn-primary ">Add Employee</a>
         </div>
 
         <div class="card-body">
@@ -45,6 +45,7 @@
                             <td>
                                 <a href="<?= base_url('employee/edit/' . $row['id']) ?>" class="btn btn-success">Edit</a>
                                 <a href="<?= base_url('employee/delete/' . $row['id']) ?>" class="btn btn-danger">Delete</a>
+                                <a href="<?= base_url('employee/view-user/'.$row['id']) ?>" class="btn btn-primary">View</a>
                             </td>
                         </tr>
                     <?php endforeach; ?>
