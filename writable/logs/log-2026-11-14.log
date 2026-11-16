@@ -1,0 +1,1183 @@
+CRITICAL - 2026-11-14 04:40:10 --> Error: Undefined constant App\Controllers\EmployeeController::store
+[Method: GET, Route: employee-add]
+in APPPATH\Config\Routes.php on line 9.
+ 1 SYSTEMPATH\Router\RouteCollection.php(339): require()
+ 2 SYSTEMPATH\CodeIgniter.php(839): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 3 SYSTEMPATH\CodeIgniter.php(462): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-11-14 05:33:55 --> Column 'name' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('INSERT INTO `employees` (`name`, `email`, `phone`, `designation`, `salary`, `access_level`, `status`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `employees` (`name`, `email`, `phone`, `designation`, `salary`, `access_level`, `status`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `employees` (`name`, `email`, `phone`, `designation`, `salary`, `access_level`, `status`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2362): CodeIgniter\Database\BaseConnection->query('INSERT INTO `employees` (`name`, `email`, `phone`, `designation`, `salary`, `access_level`, `status`) VALUES (:name:, :email:, :phone:, :designation:, :salary:, :access_level:, :status:)', [...], false)
+ 5 SYSTEMPATH\Model.php(358): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(671): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(752): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\EmployeeController.php(30): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->store()
+11 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-14 05:33:55 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'name' cannot be null
+[Method: GET, Route: employee-store]
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2362): CodeIgniter\Database\BaseConnection->query('INSERT INTO `employees` (`name`, `email`, `phone`, `designation`, `salary`, `access_level`, `status`) VALUES (:name:, :email:, :phone:, :designation:, :salary:, :access_level:, :status:)', [...], false)
+ 2 SYSTEMPATH\Model.php(358): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(671): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(752): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\EmployeeController.php(30): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->store()
+ 8 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-14 05:33:55 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'name' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 330.
+ 1 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `employees` (`name`, `email`, `phone`, `designation`, `salary`, `access_level`, `status`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `employees` (`name`, `email`, `phone`, `designation`, `salary`, `access_level`, `status`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2362): CodeIgniter\Database\BaseConnection->query('INSERT INTO `employees` (`name`, `email`, `phone`, `designation`, `salary`, `access_level`, `status`) VALUES (:name:, :email:, :phone:, :designation:, :salary:, :access_level:, :status:)', [...], false)
+ 4 SYSTEMPATH\Model.php(358): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(671): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(752): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\EmployeeController.php(30): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->store()
+10 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-14 05:33:55 --> [Caused by] mysqli_sql_exception: Column 'name' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('INSERT INTO `employees` (`name`, `email`, `phone`, `designation`, `salary`, `access_level`, `status`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `employees` (`name`, `email`, `phone`, `designation`, `salary`, `access_level`, `status`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `employees` (`name`, `email`, `phone`, `designation`, `salary`, `access_level`, `status`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2362): CodeIgniter\Database\BaseConnection->query('INSERT INTO `employees` (`name`, `email`, `phone`, `designation`, `salary`, `access_level`, `status`) VALUES (:name:, :email:, :phone:, :designation:, :salary:, :access_level:, :status:)', [...], false)
+ 5 SYSTEMPATH\Model.php(358): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(671): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(752): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\EmployeeController.php(30): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->store()
+11 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-11-14 05:55:33 --> Column 'name' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('INSERT INTO `employees` (`name`, `email`, `phone`, `designation`, `salary`, `access_level`, `status`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `employees` (`name`, `email`, `phone`, `designation`, `salary`, `access_level`, `status`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `employees` (`name`, `email`, `phone`, `designation`, `salary`, `access_level`, `status`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2362): CodeIgniter\Database\BaseConnection->query('INSERT INTO `employees` (`name`, `email`, `phone`, `designation`, `salary`, `access_level`, `status`) VALUES (:name:, :email:, :phone:, :designation:, :salary:, :access_level:, :status:)', [...], false)
+ 5 SYSTEMPATH\Model.php(358): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(671): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(752): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\EmployeeController.php(30): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->store()
+11 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-14 05:55:33 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'name' cannot be null
+[Method: GET, Route: employee-store]
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2362): CodeIgniter\Database\BaseConnection->query('INSERT INTO `employees` (`name`, `email`, `phone`, `designation`, `salary`, `access_level`, `status`) VALUES (:name:, :email:, :phone:, :designation:, :salary:, :access_level:, :status:)', [...], false)
+ 2 SYSTEMPATH\Model.php(358): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(671): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(752): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\EmployeeController.php(30): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->store()
+ 8 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-14 05:55:33 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'name' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 330.
+ 1 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `employees` (`name`, `email`, `phone`, `designation`, `salary`, `access_level`, `status`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `employees` (`name`, `email`, `phone`, `designation`, `salary`, `access_level`, `status`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2362): CodeIgniter\Database\BaseConnection->query('INSERT INTO `employees` (`name`, `email`, `phone`, `designation`, `salary`, `access_level`, `status`) VALUES (:name:, :email:, :phone:, :designation:, :salary:, :access_level:, :status:)', [...], false)
+ 4 SYSTEMPATH\Model.php(358): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(671): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(752): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\EmployeeController.php(30): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->store()
+10 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-14 05:55:33 --> [Caused by] mysqli_sql_exception: Column 'name' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('INSERT INTO `employees` (`name`, `email`, `phone`, `designation`, `salary`, `access_level`, `status`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `employees` (`name`, `email`, `phone`, `designation`, `salary`, `access_level`, `status`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `employees` (`name`, `email`, `phone`, `designation`, `salary`, `access_level`, `status`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2362): CodeIgniter\Database\BaseConnection->query('INSERT INTO `employees` (`name`, `email`, `phone`, `designation`, `salary`, `access_level`, `status`) VALUES (:name:, :email:, :phone:, :designation:, :salary:, :access_level:, :status:)', [...], false)
+ 5 SYSTEMPATH\Model.php(358): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(671): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(752): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\EmployeeController.php(30): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->store()
+11 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-11-14 06:00:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 06:39:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 06:39:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 06:42:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 06:45:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 06:47:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 06:47:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 06:48:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 06:50:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 06:50:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 06:50:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 06:50:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 06:51:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 06:51:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 07:00:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 07:01:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 07:01:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 07:06:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 07:06:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 07:06:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 07:06:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 07:06:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 07:10:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 07:14:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 07:15:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 07:28:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-11-14 07:28:41 --> Error: Undefined constant "App\Controllers\employee"
+[Method: GET, Route: employee/edit/1]
+in APPPATH\Controllers\EmployeeController.php on line 35.
+ 1 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->edit('1')
+ 2 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-11-14 07:35:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 07:35:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 07:39:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 07:39:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 07:39:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 07:45:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 07:45:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 07:45:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 07:48:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 09:13:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-11-14 09:56:14 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "sujal2@gmail.com"
+[Method: POST, Route: employee/update/sujal2@gmail.com]
+in SYSTEMPATH\Router\Router.php on line 766.
+ 1 SYSTEMPATH\Router\Router.php(215): CodeIgniter\Router\Router->checkDisallowedChars('employee/update/sujal2@gmail.com')
+ 2 SYSTEMPATH\CodeIgniter.php(850): CodeIgniter\Router\Router->handle('employee/update/sujal2@gmail.com')
+ 3 SYSTEMPATH\CodeIgniter.php(462): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-14 09:56:48 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "sujal2@gmail.com"
+[Method: POST, Route: employee/update/sujal2@gmail.com]
+in SYSTEMPATH\Router\Router.php on line 766.
+ 1 SYSTEMPATH\Router\Router.php(215): CodeIgniter\Router\Router->checkDisallowedChars('employee/update/sujal2@gmail.com')
+ 2 SYSTEMPATH\CodeIgniter.php(850): CodeIgniter\Router\Router->handle('employee/update/sujal2@gmail.com')
+ 3 SYSTEMPATH\CodeIgniter.php(462): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-14 09:56:52 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "sujal2@gmail.com"
+[Method: POST, Route: employee/update/sujal2@gmail.com]
+in SYSTEMPATH\Router\Router.php on line 766.
+ 1 SYSTEMPATH\Router\Router.php(215): CodeIgniter\Router\Router->checkDisallowedChars('employee/update/sujal2@gmail.com')
+ 2 SYSTEMPATH\CodeIgniter.php(850): CodeIgniter\Router\Router->handle('employee/update/sujal2@gmail.com')
+ 3 SYSTEMPATH\CodeIgniter.php(462): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-11-14 10:16:49 --> Duplicate entry '' for key 'employees.email'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('UPDATE `employees` SET `name` = \'Sujal\', `email` = NULL, `phone` = NULL, `designation` = \'Software Developer\', `salary` = \'20000.00\', `access_level` = \'employee\', `status` = \'active\'
+WHERE `employees`.`id` IN (\'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `employees` SET `name` = \'Sujal\', `email` = NULL, `phone` = NULL, `designation` = \'Software Developer\', `salary` = \'20000.00\', `access_level` = \'employee\', `status` = \'active\'
+WHERE `employees`.`id` IN (\'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `employees` SET `name` = \'Sujal\', `email` = NULL, `phone` = NULL, `designation` = \'Software Developer\', `salary` = \'20000.00\', `access_level` = \'employee\', `status` = \'active\'
+WHERE `employees`.`id` IN (\'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2540): CodeIgniter\Database\BaseConnection->query('UPDATE `employees` SET `name` = :name:, `email` = :email:, `phone` = :phone:, `designation` = :designation:, `salary` = :salary:, `access_level` = :access_level:, `status` = :status:
+WHERE `employees`.`id` IN :employees.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(409): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(728): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\EmployeeController.php(52): CodeIgniter\Model->update('1', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->update('1')
+10 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-14 10:16:49 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '' for key 'employees.email'
+[Method: POST, Route: employee/update/1]
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2540): CodeIgniter\Database\BaseConnection->query('UPDATE `employees` SET `name` = :name:, `email` = :email:, `phone` = :phone:, `designation` = :designation:, `salary` = :salary:, `access_level` = :access_level:, `status` = :status:
+WHERE `employees`.`id` IN :employees.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(409): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(728): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\EmployeeController.php(52): CodeIgniter\Model->update('1', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->update('1')
+ 7 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-14 10:16:49 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '' for key 'employees.email'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 330.
+ 1 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `employees` SET `name` = \'Sujal\', `email` = NULL, `phone` = NULL, `designation` = \'Software Developer\', `salary` = \'20000.00\', `access_level` = \'employee\', `status` = \'active\'
+WHERE `employees`.`id` IN (\'1\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `employees` SET `name` = \'Sujal\', `email` = NULL, `phone` = NULL, `designation` = \'Software Developer\', `salary` = \'20000.00\', `access_level` = \'employee\', `status` = \'active\'
+WHERE `employees`.`id` IN (\'1\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2540): CodeIgniter\Database\BaseConnection->query('UPDATE `employees` SET `name` = :name:, `email` = :email:, `phone` = :phone:, `designation` = :designation:, `salary` = :salary:, `access_level` = :access_level:, `status` = :status:
+WHERE `employees`.`id` IN :employees.id:', [...], false)
+ 4 SYSTEMPATH\Model.php(409): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(728): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Controllers\EmployeeController.php(52): CodeIgniter\Model->update('1', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->update('1')
+ 9 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-14 10:16:49 --> [Caused by] mysqli_sql_exception: Duplicate entry '' for key 'employees.email'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('UPDATE `employees` SET `name` = \'Sujal\', `email` = NULL, `phone` = NULL, `designation` = \'Software Developer\', `salary` = \'20000.00\', `access_level` = \'employee\', `status` = \'active\'
+WHERE `employees`.`id` IN (\'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `employees` SET `name` = \'Sujal\', `email` = NULL, `phone` = NULL, `designation` = \'Software Developer\', `salary` = \'20000.00\', `access_level` = \'employee\', `status` = \'active\'
+WHERE `employees`.`id` IN (\'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `employees` SET `name` = \'Sujal\', `email` = NULL, `phone` = NULL, `designation` = \'Software Developer\', `salary` = \'20000.00\', `access_level` = \'employee\', `status` = \'active\'
+WHERE `employees`.`id` IN (\'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2540): CodeIgniter\Database\BaseConnection->query('UPDATE `employees` SET `name` = :name:, `email` = :email:, `phone` = :phone:, `designation` = :designation:, `salary` = :salary:, `access_level` = :access_level:, `status` = :status:
+WHERE `employees`.`id` IN :employees.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(409): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(728): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\EmployeeController.php(52): CodeIgniter\Model->update('1', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->update('1')
+10 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-11-14 10:22:02 --> Duplicate entry '' for key 'employees.email'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('UPDATE `employees` SET `name` = \'Sujal naina\', `email` = NULL, `phone` = NULL, `designation` = \'Software Developer\', `salary` = \'20000.00\', `access_level` = \'employee\', `status` = \'active\'
+WHERE `employees`.`id` IN (\'2\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `employees` SET `name` = \'Sujal naina\', `email` = NULL, `phone` = NULL, `designation` = \'Software Developer\', `salary` = \'20000.00\', `access_level` = \'employee\', `status` = \'active\'
+WHERE `employees`.`id` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `employees` SET `name` = \'Sujal naina\', `email` = NULL, `phone` = NULL, `designation` = \'Software Developer\', `salary` = \'20000.00\', `access_level` = \'employee\', `status` = \'active\'
+WHERE `employees`.`id` IN (\'2\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2540): CodeIgniter\Database\BaseConnection->query('UPDATE `employees` SET `name` = :name:, `email` = :email:, `phone` = :phone:, `designation` = :designation:, `salary` = :salary:, `access_level` = :access_level:, `status` = :status:
+WHERE `employees`.`id` IN :employees.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(409): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(728): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\EmployeeController.php(52): CodeIgniter\Model->update('2', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->update('2')
+10 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-14 10:22:02 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '' for key 'employees.email'
+[Method: POST, Route: employee/update/2]
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2540): CodeIgniter\Database\BaseConnection->query('UPDATE `employees` SET `name` = :name:, `email` = :email:, `phone` = :phone:, `designation` = :designation:, `salary` = :salary:, `access_level` = :access_level:, `status` = :status:
+WHERE `employees`.`id` IN :employees.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(409): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(728): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\EmployeeController.php(52): CodeIgniter\Model->update('2', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->update('2')
+ 7 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-14 10:22:02 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '' for key 'employees.email'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 330.
+ 1 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `employees` SET `name` = \'Sujal naina\', `email` = NULL, `phone` = NULL, `designation` = \'Software Developer\', `salary` = \'20000.00\', `access_level` = \'employee\', `status` = \'active\'
+WHERE `employees`.`id` IN (\'2\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `employees` SET `name` = \'Sujal naina\', `email` = NULL, `phone` = NULL, `designation` = \'Software Developer\', `salary` = \'20000.00\', `access_level` = \'employee\', `status` = \'active\'
+WHERE `employees`.`id` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2540): CodeIgniter\Database\BaseConnection->query('UPDATE `employees` SET `name` = :name:, `email` = :email:, `phone` = :phone:, `designation` = :designation:, `salary` = :salary:, `access_level` = :access_level:, `status` = :status:
+WHERE `employees`.`id` IN :employees.id:', [...], false)
+ 4 SYSTEMPATH\Model.php(409): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(728): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Controllers\EmployeeController.php(52): CodeIgniter\Model->update('2', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->update('2')
+ 9 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-14 10:22:02 --> [Caused by] mysqli_sql_exception: Duplicate entry '' for key 'employees.email'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('UPDATE `employees` SET `name` = \'Sujal naina\', `email` = NULL, `phone` = NULL, `designation` = \'Software Developer\', `salary` = \'20000.00\', `access_level` = \'employee\', `status` = \'active\'
+WHERE `employees`.`id` IN (\'2\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `employees` SET `name` = \'Sujal naina\', `email` = NULL, `phone` = NULL, `designation` = \'Software Developer\', `salary` = \'20000.00\', `access_level` = \'employee\', `status` = \'active\'
+WHERE `employees`.`id` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `employees` SET `name` = \'Sujal naina\', `email` = NULL, `phone` = NULL, `designation` = \'Software Developer\', `salary` = \'20000.00\', `access_level` = \'employee\', `status` = \'active\'
+WHERE `employees`.`id` IN (\'2\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2540): CodeIgniter\Database\BaseConnection->query('UPDATE `employees` SET `name` = :name:, `email` = :email:, `phone` = :phone:, `designation` = :designation:, `salary` = :salary:, `access_level` = :access_level:, `status` = :status:
+WHERE `employees`.`id` IN :employees.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(409): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(728): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\EmployeeController.php(52): CodeIgniter\Model->update('2', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->update('2')
+10 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-11-14 10:23:15 --> Duplicate entry '' for key 'employees.email'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('UPDATE `employees` SET `name` = \'Sujal naina\', `email` = NULL, `phone` = NULL, `designation` = \'Software Developer\', `salary` = \'20000.00\', `access_level` = \'employee\', `status` = \'active\'
+WHERE `employees`.`id` IN (\'2\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `employees` SET `name` = \'Sujal naina\', `email` = NULL, `phone` = NULL, `designation` = \'Software Developer\', `salary` = \'20000.00\', `access_level` = \'employee\', `status` = \'active\'
+WHERE `employees`.`id` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `employees` SET `name` = \'Sujal naina\', `email` = NULL, `phone` = NULL, `designation` = \'Software Developer\', `salary` = \'20000.00\', `access_level` = \'employee\', `status` = \'active\'
+WHERE `employees`.`id` IN (\'2\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2540): CodeIgniter\Database\BaseConnection->query('UPDATE `employees` SET `name` = :name:, `email` = :email:, `phone` = :phone:, `designation` = :designation:, `salary` = :salary:, `access_level` = :access_level:, `status` = :status:
+WHERE `employees`.`id` IN :employees.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(409): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(728): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\EmployeeController.php(52): CodeIgniter\Model->update('2', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->update('2')
+10 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-14 10:23:15 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '' for key 'employees.email'
+[Method: POST, Route: employee/update/2]
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2540): CodeIgniter\Database\BaseConnection->query('UPDATE `employees` SET `name` = :name:, `email` = :email:, `phone` = :phone:, `designation` = :designation:, `salary` = :salary:, `access_level` = :access_level:, `status` = :status:
+WHERE `employees`.`id` IN :employees.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(409): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(728): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\EmployeeController.php(52): CodeIgniter\Model->update('2', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->update('2')
+ 7 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-14 10:23:15 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '' for key 'employees.email'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 330.
+ 1 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `employees` SET `name` = \'Sujal naina\', `email` = NULL, `phone` = NULL, `designation` = \'Software Developer\', `salary` = \'20000.00\', `access_level` = \'employee\', `status` = \'active\'
+WHERE `employees`.`id` IN (\'2\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `employees` SET `name` = \'Sujal naina\', `email` = NULL, `phone` = NULL, `designation` = \'Software Developer\', `salary` = \'20000.00\', `access_level` = \'employee\', `status` = \'active\'
+WHERE `employees`.`id` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2540): CodeIgniter\Database\BaseConnection->query('UPDATE `employees` SET `name` = :name:, `email` = :email:, `phone` = :phone:, `designation` = :designation:, `salary` = :salary:, `access_level` = :access_level:, `status` = :status:
+WHERE `employees`.`id` IN :employees.id:', [...], false)
+ 4 SYSTEMPATH\Model.php(409): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(728): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Controllers\EmployeeController.php(52): CodeIgniter\Model->update('2', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->update('2')
+ 9 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-14 10:23:15 --> [Caused by] mysqli_sql_exception: Duplicate entry '' for key 'employees.email'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('UPDATE `employees` SET `name` = \'Sujal naina\', `email` = NULL, `phone` = NULL, `designation` = \'Software Developer\', `salary` = \'20000.00\', `access_level` = \'employee\', `status` = \'active\'
+WHERE `employees`.`id` IN (\'2\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `employees` SET `name` = \'Sujal naina\', `email` = NULL, `phone` = NULL, `designation` = \'Software Developer\', `salary` = \'20000.00\', `access_level` = \'employee\', `status` = \'active\'
+WHERE `employees`.`id` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `employees` SET `name` = \'Sujal naina\', `email` = NULL, `phone` = NULL, `designation` = \'Software Developer\', `salary` = \'20000.00\', `access_level` = \'employee\', `status` = \'active\'
+WHERE `employees`.`id` IN (\'2\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2540): CodeIgniter\Database\BaseConnection->query('UPDATE `employees` SET `name` = :name:, `email` = :email:, `phone` = :phone:, `designation` = :designation:, `salary` = :salary:, `access_level` = :access_level:, `status` = :status:
+WHERE `employees`.`id` IN :employees.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(409): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(728): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\EmployeeController.php(52): CodeIgniter\Model->update('2', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->update('2')
+10 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-11-14 10:23:24 --> Duplicate entry '' for key 'employees.email'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('UPDATE `employees` SET `name` = \'Sujal naina\', `email` = NULL, `phone` = NULL, `designation` = \'Software Developer\', `salary` = \'20000.00\', `access_level` = \'employee\', `status` = \'active\'
+WHERE `employees`.`id` IN (\'2\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `employees` SET `name` = \'Sujal naina\', `email` = NULL, `phone` = NULL, `designation` = \'Software Developer\', `salary` = \'20000.00\', `access_level` = \'employee\', `status` = \'active\'
+WHERE `employees`.`id` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `employees` SET `name` = \'Sujal naina\', `email` = NULL, `phone` = NULL, `designation` = \'Software Developer\', `salary` = \'20000.00\', `access_level` = \'employee\', `status` = \'active\'
+WHERE `employees`.`id` IN (\'2\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2540): CodeIgniter\Database\BaseConnection->query('UPDATE `employees` SET `name` = :name:, `email` = :email:, `phone` = :phone:, `designation` = :designation:, `salary` = :salary:, `access_level` = :access_level:, `status` = :status:
+WHERE `employees`.`id` IN :employees.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(409): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(728): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\EmployeeController.php(52): CodeIgniter\Model->update('2', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->update('2')
+10 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-14 10:23:24 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '' for key 'employees.email'
+[Method: POST, Route: employee/update/2]
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2540): CodeIgniter\Database\BaseConnection->query('UPDATE `employees` SET `name` = :name:, `email` = :email:, `phone` = :phone:, `designation` = :designation:, `salary` = :salary:, `access_level` = :access_level:, `status` = :status:
+WHERE `employees`.`id` IN :employees.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(409): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(728): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\EmployeeController.php(52): CodeIgniter\Model->update('2', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->update('2')
+ 7 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-14 10:23:24 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '' for key 'employees.email'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 330.
+ 1 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `employees` SET `name` = \'Sujal naina\', `email` = NULL, `phone` = NULL, `designation` = \'Software Developer\', `salary` = \'20000.00\', `access_level` = \'employee\', `status` = \'active\'
+WHERE `employees`.`id` IN (\'2\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `employees` SET `name` = \'Sujal naina\', `email` = NULL, `phone` = NULL, `designation` = \'Software Developer\', `salary` = \'20000.00\', `access_level` = \'employee\', `status` = \'active\'
+WHERE `employees`.`id` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2540): CodeIgniter\Database\BaseConnection->query('UPDATE `employees` SET `name` = :name:, `email` = :email:, `phone` = :phone:, `designation` = :designation:, `salary` = :salary:, `access_level` = :access_level:, `status` = :status:
+WHERE `employees`.`id` IN :employees.id:', [...], false)
+ 4 SYSTEMPATH\Model.php(409): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(728): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Controllers\EmployeeController.php(52): CodeIgniter\Model->update('2', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->update('2')
+ 9 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-14 10:23:24 --> [Caused by] mysqli_sql_exception: Duplicate entry '' for key 'employees.email'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('UPDATE `employees` SET `name` = \'Sujal naina\', `email` = NULL, `phone` = NULL, `designation` = \'Software Developer\', `salary` = \'20000.00\', `access_level` = \'employee\', `status` = \'active\'
+WHERE `employees`.`id` IN (\'2\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `employees` SET `name` = \'Sujal naina\', `email` = NULL, `phone` = NULL, `designation` = \'Software Developer\', `salary` = \'20000.00\', `access_level` = \'employee\', `status` = \'active\'
+WHERE `employees`.`id` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `employees` SET `name` = \'Sujal naina\', `email` = NULL, `phone` = NULL, `designation` = \'Software Developer\', `salary` = \'20000.00\', `access_level` = \'employee\', `status` = \'active\'
+WHERE `employees`.`id` IN (\'2\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2540): CodeIgniter\Database\BaseConnection->query('UPDATE `employees` SET `name` = :name:, `email` = :email:, `phone` = :phone:, `designation` = :designation:, `salary` = :salary:, `access_level` = :access_level:, `status` = :status:
+WHERE `employees`.`id` IN :employees.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(409): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(728): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\EmployeeController.php(52): CodeIgniter\Model->update('2', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->update('2')
+10 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-11-14 10:25:04 --> Duplicate entry '' for key 'employees.email'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('UPDATE `employees` SET `name` = \'Sujal naina\', `email` = NULL, `phone` = NULL, `designation` = \'Software Developer\', `salary` = \'20000.00\', `access_level` = \'employee\', `status` = \'active\'
+WHERE `employees`.`id` IN (\'2\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `employees` SET `name` = \'Sujal naina\', `email` = NULL, `phone` = NULL, `designation` = \'Software Developer\', `salary` = \'20000.00\', `access_level` = \'employee\', `status` = \'active\'
+WHERE `employees`.`id` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `employees` SET `name` = \'Sujal naina\', `email` = NULL, `phone` = NULL, `designation` = \'Software Developer\', `salary` = \'20000.00\', `access_level` = \'employee\', `status` = \'active\'
+WHERE `employees`.`id` IN (\'2\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2540): CodeIgniter\Database\BaseConnection->query('UPDATE `employees` SET `name` = :name:, `email` = :email:, `phone` = :phone:, `designation` = :designation:, `salary` = :salary:, `access_level` = :access_level:, `status` = :status:
+WHERE `employees`.`id` IN :employees.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(409): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(728): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\EmployeeController.php(52): CodeIgniter\Model->update('2', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->update('2')
+10 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-14 10:25:04 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '' for key 'employees.email'
+[Method: POST, Route: employee/update/2]
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2540): CodeIgniter\Database\BaseConnection->query('UPDATE `employees` SET `name` = :name:, `email` = :email:, `phone` = :phone:, `designation` = :designation:, `salary` = :salary:, `access_level` = :access_level:, `status` = :status:
+WHERE `employees`.`id` IN :employees.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(409): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(728): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\EmployeeController.php(52): CodeIgniter\Model->update('2', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->update('2')
+ 7 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-14 10:25:04 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '' for key 'employees.email'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 330.
+ 1 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `employees` SET `name` = \'Sujal naina\', `email` = NULL, `phone` = NULL, `designation` = \'Software Developer\', `salary` = \'20000.00\', `access_level` = \'employee\', `status` = \'active\'
+WHERE `employees`.`id` IN (\'2\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `employees` SET `name` = \'Sujal naina\', `email` = NULL, `phone` = NULL, `designation` = \'Software Developer\', `salary` = \'20000.00\', `access_level` = \'employee\', `status` = \'active\'
+WHERE `employees`.`id` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2540): CodeIgniter\Database\BaseConnection->query('UPDATE `employees` SET `name` = :name:, `email` = :email:, `phone` = :phone:, `designation` = :designation:, `salary` = :salary:, `access_level` = :access_level:, `status` = :status:
+WHERE `employees`.`id` IN :employees.id:', [...], false)
+ 4 SYSTEMPATH\Model.php(409): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(728): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Controllers\EmployeeController.php(52): CodeIgniter\Model->update('2', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->update('2')
+ 9 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-14 10:25:04 --> [Caused by] mysqli_sql_exception: Duplicate entry '' for key 'employees.email'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('UPDATE `employees` SET `name` = \'Sujal naina\', `email` = NULL, `phone` = NULL, `designation` = \'Software Developer\', `salary` = \'20000.00\', `access_level` = \'employee\', `status` = \'active\'
+WHERE `employees`.`id` IN (\'2\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `employees` SET `name` = \'Sujal naina\', `email` = NULL, `phone` = NULL, `designation` = \'Software Developer\', `salary` = \'20000.00\', `access_level` = \'employee\', `status` = \'active\'
+WHERE `employees`.`id` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `employees` SET `name` = \'Sujal naina\', `email` = NULL, `phone` = NULL, `designation` = \'Software Developer\', `salary` = \'20000.00\', `access_level` = \'employee\', `status` = \'active\'
+WHERE `employees`.`id` IN (\'2\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2540): CodeIgniter\Database\BaseConnection->query('UPDATE `employees` SET `name` = :name:, `email` = :email:, `phone` = :phone:, `designation` = :designation:, `salary` = :salary:, `access_level` = :access_level:, `status` = :status:
+WHERE `employees`.`id` IN :employees.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(409): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(728): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\EmployeeController.php(52): CodeIgniter\Model->update('2', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->update('2')
+10 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-11-14 10:25:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-11-14 10:25:36 --> Duplicate entry '' for key 'employees.email'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('UPDATE `employees` SET `name` = \'Sujal naina\', `email` = NULL, `phone` = NULL, `designation` = \'Software Developer\', `salary` = \'20000.00\', `access_level` = \'employee\', `status` = \'active\'
+WHERE `employees`.`id` IN (\'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `employees` SET `name` = \'Sujal naina\', `email` = NULL, `phone` = NULL, `designation` = \'Software Developer\', `salary` = \'20000.00\', `access_level` = \'employee\', `status` = \'active\'
+WHERE `employees`.`id` IN (\'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `employees` SET `name` = \'Sujal naina\', `email` = NULL, `phone` = NULL, `designation` = \'Software Developer\', `salary` = \'20000.00\', `access_level` = \'employee\', `status` = \'active\'
+WHERE `employees`.`id` IN (\'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2540): CodeIgniter\Database\BaseConnection->query('UPDATE `employees` SET `name` = :name:, `email` = :email:, `phone` = :phone:, `designation` = :designation:, `salary` = :salary:, `access_level` = :access_level:, `status` = :status:
+WHERE `employees`.`id` IN :employees.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(409): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(728): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\EmployeeController.php(52): CodeIgniter\Model->update('1', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->update('1')
+10 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-14 10:25:36 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '' for key 'employees.email'
+[Method: POST, Route: employee/update/1]
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2540): CodeIgniter\Database\BaseConnection->query('UPDATE `employees` SET `name` = :name:, `email` = :email:, `phone` = :phone:, `designation` = :designation:, `salary` = :salary:, `access_level` = :access_level:, `status` = :status:
+WHERE `employees`.`id` IN :employees.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(409): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(728): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\EmployeeController.php(52): CodeIgniter\Model->update('1', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->update('1')
+ 7 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-14 10:25:36 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '' for key 'employees.email'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 330.
+ 1 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `employees` SET `name` = \'Sujal naina\', `email` = NULL, `phone` = NULL, `designation` = \'Software Developer\', `salary` = \'20000.00\', `access_level` = \'employee\', `status` = \'active\'
+WHERE `employees`.`id` IN (\'1\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `employees` SET `name` = \'Sujal naina\', `email` = NULL, `phone` = NULL, `designation` = \'Software Developer\', `salary` = \'20000.00\', `access_level` = \'employee\', `status` = \'active\'
+WHERE `employees`.`id` IN (\'1\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2540): CodeIgniter\Database\BaseConnection->query('UPDATE `employees` SET `name` = :name:, `email` = :email:, `phone` = :phone:, `designation` = :designation:, `salary` = :salary:, `access_level` = :access_level:, `status` = :status:
+WHERE `employees`.`id` IN :employees.id:', [...], false)
+ 4 SYSTEMPATH\Model.php(409): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(728): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Controllers\EmployeeController.php(52): CodeIgniter\Model->update('1', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->update('1')
+ 9 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-14 10:25:36 --> [Caused by] mysqli_sql_exception: Duplicate entry '' for key 'employees.email'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('UPDATE `employees` SET `name` = \'Sujal naina\', `email` = NULL, `phone` = NULL, `designation` = \'Software Developer\', `salary` = \'20000.00\', `access_level` = \'employee\', `status` = \'active\'
+WHERE `employees`.`id` IN (\'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `employees` SET `name` = \'Sujal naina\', `email` = NULL, `phone` = NULL, `designation` = \'Software Developer\', `salary` = \'20000.00\', `access_level` = \'employee\', `status` = \'active\'
+WHERE `employees`.`id` IN (\'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `employees` SET `name` = \'Sujal naina\', `email` = NULL, `phone` = NULL, `designation` = \'Software Developer\', `salary` = \'20000.00\', `access_level` = \'employee\', `status` = \'active\'
+WHERE `employees`.`id` IN (\'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2540): CodeIgniter\Database\BaseConnection->query('UPDATE `employees` SET `name` = :name:, `email` = :email:, `phone` = :phone:, `designation` = :designation:, `salary` = :salary:, `access_level` = :access_level:, `status` = :status:
+WHERE `employees`.`id` IN :employees.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(409): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(728): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\EmployeeController.php(52): CodeIgniter\Model->update('1', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->update('1')
+10 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-11-14 10:26:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-11-14 10:26:31 --> Duplicate entry '' for key 'employees.email'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('UPDATE `employees` SET `name` = \'Sujal\', `email` = NULL, `phone` = NULL, `designation` = \'Software Developer\', `salary` = \'20000.00\', `access_level` = \'employee\', `status` = \'active\'
+WHERE `employees`.`id` IN (\'2\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `employees` SET `name` = \'Sujal\', `email` = NULL, `phone` = NULL, `designation` = \'Software Developer\', `salary` = \'20000.00\', `access_level` = \'employee\', `status` = \'active\'
+WHERE `employees`.`id` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `employees` SET `name` = \'Sujal\', `email` = NULL, `phone` = NULL, `designation` = \'Software Developer\', `salary` = \'20000.00\', `access_level` = \'employee\', `status` = \'active\'
+WHERE `employees`.`id` IN (\'2\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2540): CodeIgniter\Database\BaseConnection->query('UPDATE `employees` SET `name` = :name:, `email` = :email:, `phone` = :phone:, `designation` = :designation:, `salary` = :salary:, `access_level` = :access_level:, `status` = :status:
+WHERE `employees`.`id` IN :employees.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(409): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(728): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\EmployeeController.php(52): CodeIgniter\Model->update('2', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->update('2')
+10 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-14 10:26:31 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '' for key 'employees.email'
+[Method: POST, Route: employee/update/2]
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2540): CodeIgniter\Database\BaseConnection->query('UPDATE `employees` SET `name` = :name:, `email` = :email:, `phone` = :phone:, `designation` = :designation:, `salary` = :salary:, `access_level` = :access_level:, `status` = :status:
+WHERE `employees`.`id` IN :employees.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(409): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(728): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\EmployeeController.php(52): CodeIgniter\Model->update('2', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->update('2')
+ 7 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-14 10:26:31 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '' for key 'employees.email'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 330.
+ 1 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `employees` SET `name` = \'Sujal\', `email` = NULL, `phone` = NULL, `designation` = \'Software Developer\', `salary` = \'20000.00\', `access_level` = \'employee\', `status` = \'active\'
+WHERE `employees`.`id` IN (\'2\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `employees` SET `name` = \'Sujal\', `email` = NULL, `phone` = NULL, `designation` = \'Software Developer\', `salary` = \'20000.00\', `access_level` = \'employee\', `status` = \'active\'
+WHERE `employees`.`id` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2540): CodeIgniter\Database\BaseConnection->query('UPDATE `employees` SET `name` = :name:, `email` = :email:, `phone` = :phone:, `designation` = :designation:, `salary` = :salary:, `access_level` = :access_level:, `status` = :status:
+WHERE `employees`.`id` IN :employees.id:', [...], false)
+ 4 SYSTEMPATH\Model.php(409): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(728): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Controllers\EmployeeController.php(52): CodeIgniter\Model->update('2', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->update('2')
+ 9 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-14 10:26:31 --> [Caused by] mysqli_sql_exception: Duplicate entry '' for key 'employees.email'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('UPDATE `employees` SET `name` = \'Sujal\', `email` = NULL, `phone` = NULL, `designation` = \'Software Developer\', `salary` = \'20000.00\', `access_level` = \'employee\', `status` = \'active\'
+WHERE `employees`.`id` IN (\'2\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `employees` SET `name` = \'Sujal\', `email` = NULL, `phone` = NULL, `designation` = \'Software Developer\', `salary` = \'20000.00\', `access_level` = \'employee\', `status` = \'active\'
+WHERE `employees`.`id` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `employees` SET `name` = \'Sujal\', `email` = NULL, `phone` = NULL, `designation` = \'Software Developer\', `salary` = \'20000.00\', `access_level` = \'employee\', `status` = \'active\'
+WHERE `employees`.`id` IN (\'2\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2540): CodeIgniter\Database\BaseConnection->query('UPDATE `employees` SET `name` = :name:, `email` = :email:, `phone` = :phone:, `designation` = :designation:, `salary` = :salary:, `access_level` = :access_level:, `status` = :status:
+WHERE `employees`.`id` IN :employees.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(409): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(728): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\EmployeeController.php(52): CodeIgniter\Model->update('2', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->update('2')
+10 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-11-14 10:28:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-11-14 10:28:34 --> CodeIgniter\Exceptions\InvalidArgumentException: Invalid primary key: NULL is not allowed.
+[Method: POST, Route: employee/update/1]
+in SYSTEMPATH\BaseModel.php on line 833.
+ 1 SYSTEMPATH\BaseModel.php(818): CodeIgniter\BaseModel->validateID(null, false)
+ 2 SYSTEMPATH\BaseModel.php(1040): CodeIgniter\BaseModel->validateID([...])
+ 3 SYSTEMPATH\Model.php(728): CodeIgniter\BaseModel->update([...], '1')
+ 4 APPPATH\Controllers\EmployeeController.php(52): CodeIgniter\Model->update([...], '1')
+ 5 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->update('1')
+ 6 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-11-14 10:32:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-11-14 10:33:01 --> Column 'email' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('INSERT INTO `employees` (`name`, `email`, `phone`, `designation`, `salary`, `access_level`, `status`) VALUES (\'Sujal\', NULL, NULL, \'Software Developer\', \'20000.00\', \'employee\', \'active\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `employees` (`name`, `email`, `phone`, `designation`, `salary`, `access_level`, `status`) VALUES (\'Sujal\', NULL, NULL, \'Software Developer\', \'20000.00\', \'employee\', \'active\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `employees` (`name`, `email`, `phone`, `designation`, `salary`, `access_level`, `status`) VALUES (\'Sujal\', NULL, NULL, \'Software Developer\', \'20000.00\', \'employee\', \'active\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2362): CodeIgniter\Database\BaseConnection->query('INSERT INTO `employees` (`name`, `email`, `phone`, `designation`, `salary`, `access_level`, `status`) VALUES (:name:, :email:, :phone:, :designation:, :salary:, :access_level:, :status:)', [...], false)
+ 5 SYSTEMPATH\Model.php(358): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(671): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(752): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\EmployeeController.php(52): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->update('1')
+11 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-14 10:33:01 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'email' cannot be null
+[Method: POST, Route: employee/update/1]
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2362): CodeIgniter\Database\BaseConnection->query('INSERT INTO `employees` (`name`, `email`, `phone`, `designation`, `salary`, `access_level`, `status`) VALUES (:name:, :email:, :phone:, :designation:, :salary:, :access_level:, :status:)', [...], false)
+ 2 SYSTEMPATH\Model.php(358): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(671): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(752): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\EmployeeController.php(52): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->update('1')
+ 8 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-14 10:33:01 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'email' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 330.
+ 1 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `employees` (`name`, `email`, `phone`, `designation`, `salary`, `access_level`, `status`) VALUES (\'Sujal\', NULL, NULL, \'Software Developer\', \'20000.00\', \'employee\', \'active\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `employees` (`name`, `email`, `phone`, `designation`, `salary`, `access_level`, `status`) VALUES (\'Sujal\', NULL, NULL, \'Software Developer\', \'20000.00\', \'employee\', \'active\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2362): CodeIgniter\Database\BaseConnection->query('INSERT INTO `employees` (`name`, `email`, `phone`, `designation`, `salary`, `access_level`, `status`) VALUES (:name:, :email:, :phone:, :designation:, :salary:, :access_level:, :status:)', [...], false)
+ 4 SYSTEMPATH\Model.php(358): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(671): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(752): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\EmployeeController.php(52): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->update('1')
+10 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-14 10:33:01 --> [Caused by] mysqli_sql_exception: Column 'email' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('INSERT INTO `employees` (`name`, `email`, `phone`, `designation`, `salary`, `access_level`, `status`) VALUES (\'Sujal\', NULL, NULL, \'Software Developer\', \'20000.00\', \'employee\', \'active\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `employees` (`name`, `email`, `phone`, `designation`, `salary`, `access_level`, `status`) VALUES (\'Sujal\', NULL, NULL, \'Software Developer\', \'20000.00\', \'employee\', \'active\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `employees` (`name`, `email`, `phone`, `designation`, `salary`, `access_level`, `status`) VALUES (\'Sujal\', NULL, NULL, \'Software Developer\', \'20000.00\', \'employee\', \'active\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2362): CodeIgniter\Database\BaseConnection->query('INSERT INTO `employees` (`name`, `email`, `phone`, `designation`, `salary`, `access_level`, `status`) VALUES (:name:, :email:, :phone:, :designation:, :salary:, :access_level:, :status:)', [...], false)
+ 5 SYSTEMPATH\Model.php(358): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(671): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(752): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\EmployeeController.php(52): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->update('1')
+11 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-11-14 10:33:21 --> Column 'email' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('INSERT INTO `employees` (`name`, `email`, `phone`, `designation`, `salary`, `access_level`, `status`) VALUES (\'Sujal\', NULL, NULL, \'Software Developer\', \'20000.00\', \'employee\', \'active\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `employees` (`name`, `email`, `phone`, `designation`, `salary`, `access_level`, `status`) VALUES (\'Sujal\', NULL, NULL, \'Software Developer\', \'20000.00\', \'employee\', \'active\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `employees` (`name`, `email`, `phone`, `designation`, `salary`, `access_level`, `status`) VALUES (\'Sujal\', NULL, NULL, \'Software Developer\', \'20000.00\', \'employee\', \'active\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2362): CodeIgniter\Database\BaseConnection->query('INSERT INTO `employees` (`name`, `email`, `phone`, `designation`, `salary`, `access_level`, `status`) VALUES (:name:, :email:, :phone:, :designation:, :salary:, :access_level:, :status:)', [...], false)
+ 5 SYSTEMPATH\Model.php(358): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(671): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(752): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\EmployeeController.php(52): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->update('1')
+11 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-14 10:33:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'email' cannot be null
+[Method: POST, Route: employee/update/1]
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2362): CodeIgniter\Database\BaseConnection->query('INSERT INTO `employees` (`name`, `email`, `phone`, `designation`, `salary`, `access_level`, `status`) VALUES (:name:, :email:, :phone:, :designation:, :salary:, :access_level:, :status:)', [...], false)
+ 2 SYSTEMPATH\Model.php(358): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(671): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(752): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\EmployeeController.php(52): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->update('1')
+ 8 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-14 10:33:21 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'email' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 330.
+ 1 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `employees` (`name`, `email`, `phone`, `designation`, `salary`, `access_level`, `status`) VALUES (\'Sujal\', NULL, NULL, \'Software Developer\', \'20000.00\', \'employee\', \'active\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `employees` (`name`, `email`, `phone`, `designation`, `salary`, `access_level`, `status`) VALUES (\'Sujal\', NULL, NULL, \'Software Developer\', \'20000.00\', \'employee\', \'active\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2362): CodeIgniter\Database\BaseConnection->query('INSERT INTO `employees` (`name`, `email`, `phone`, `designation`, `salary`, `access_level`, `status`) VALUES (:name:, :email:, :phone:, :designation:, :salary:, :access_level:, :status:)', [...], false)
+ 4 SYSTEMPATH\Model.php(358): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(671): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(752): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\EmployeeController.php(52): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->update('1')
+10 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-14 10:33:21 --> [Caused by] mysqli_sql_exception: Column 'email' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('INSERT INTO `employees` (`name`, `email`, `phone`, `designation`, `salary`, `access_level`, `status`) VALUES (\'Sujal\', NULL, NULL, \'Software Developer\', \'20000.00\', \'employee\', \'active\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `employees` (`name`, `email`, `phone`, `designation`, `salary`, `access_level`, `status`) VALUES (\'Sujal\', NULL, NULL, \'Software Developer\', \'20000.00\', \'employee\', \'active\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `employees` (`name`, `email`, `phone`, `designation`, `salary`, `access_level`, `status`) VALUES (\'Sujal\', NULL, NULL, \'Software Developer\', \'20000.00\', \'employee\', \'active\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2362): CodeIgniter\Database\BaseConnection->query('INSERT INTO `employees` (`name`, `email`, `phone`, `designation`, `salary`, `access_level`, `status`) VALUES (:name:, :email:, :phone:, :designation:, :salary:, :access_level:, :status:)', [...], false)
+ 5 SYSTEMPATH\Model.php(358): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(671): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(752): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\EmployeeController.php(52): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->update('1')
+11 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-11-14 10:51:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 10:51:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 10:52:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 10:52:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 10:52:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 10:52:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 10:52:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 10:52:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 10:52:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 10:52:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 10:52:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 10:52:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 10:52:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 10:52:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 10:52:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 10:52:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 10:52:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 10:52:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 10:53:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 10:53:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 10:53:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 10:53:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 10:53:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 10:53:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 10:53:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 10:54:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 10:54:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 10:54:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 10:54:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 10:55:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 10:55:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-11-14 10:55:36 --> ErrorException: Trying to access array offset on null
+[Method: GET, Route: employee/edit/1]
+in APPPATH\Views\employee\edit.php on line 18.
+ 1 APPPATH\Views\employee\edit.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on null', 'C:\\laragon\\www\\empMangeSystemSujal\\app\\Views\\employee\\edit.php', 18)
+ 2 SYSTEMPATH\View\View.php(238): include('C:\\laragon\\www\\empMangeSystemSujal\\app\\Views\\employee\\edit.php')
+ 3 SYSTEMPATH\View\View.php(241): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():235}()
+ 4 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('employee/edit', [], true)
+ 5 APPPATH\Controllers\EmployeeController.php(37): view('employee/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->edit('1')
+ 7 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-14 10:55:43 --> ErrorException: Trying to access array offset on null
+[Method: GET, Route: employee/edit/1]
+in APPPATH\Views\employee\edit.php on line 18.
+ 1 APPPATH\Views\employee\edit.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on null', 'C:\\laragon\\www\\empMangeSystemSujal\\app\\Views\\employee\\edit.php', 18)
+ 2 SYSTEMPATH\View\View.php(238): include('C:\\laragon\\www\\empMangeSystemSujal\\app\\Views\\employee\\edit.php')
+ 3 SYSTEMPATH\View\View.php(241): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():235}()
+ 4 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('employee/edit', [], true)
+ 5 APPPATH\Controllers\EmployeeController.php(37): view('employee/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->edit('1')
+ 7 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-11-14 10:56:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 10:56:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 10:56:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 10:56:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 10:56:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 11:00:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 11:00:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 11:00:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-11-14 11:00:53 --> Duplicate entry 'sujalyadav915@gmail.com' for key 'employees.email'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('INSERT INTO `employees` (`name`, `email`, `phone`, `designation`, `salary`, `access_level`, `status`) VALUES (\'Sujal Yadav\', \'sujalyadav915@gmail.com\', \'8240880291\', \'Software Developer\', \'30000\', \'employee\', \'active\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `employees` (`name`, `email`, `phone`, `designation`, `salary`, `access_level`, `status`) VALUES (\'Sujal Yadav\', \'sujalyadav915@gmail.com\', \'8240880291\', \'Software Developer\', \'30000\', \'employee\', \'active\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `employees` (`name`, `email`, `phone`, `designation`, `salary`, `access_level`, `status`) VALUES (\'Sujal Yadav\', \'sujalyadav915@gmail.com\', \'8240880291\', \'Software Developer\', \'30000\', \'employee\', \'active\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2362): CodeIgniter\Database\BaseConnection->query('INSERT INTO `employees` (`name`, `email`, `phone`, `designation`, `salary`, `access_level`, `status`) VALUES (:name:, :email:, :phone:, :designation:, :salary:, :access_level:, :status:)', [...], false)
+ 5 SYSTEMPATH\Model.php(358): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(671): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(752): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\EmployeeController.php(30): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->store()
+11 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-14 11:00:53 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'sujalyadav915@gmail.com' for key 'employees.email'
+[Method: POST, Route: employee-store]
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2362): CodeIgniter\Database\BaseConnection->query('INSERT INTO `employees` (`name`, `email`, `phone`, `designation`, `salary`, `access_level`, `status`) VALUES (:name:, :email:, :phone:, :designation:, :salary:, :access_level:, :status:)', [...], false)
+ 2 SYSTEMPATH\Model.php(358): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(671): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(752): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\EmployeeController.php(30): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->store()
+ 8 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-14 11:00:53 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'sujalyadav915@gmail.com' for key 'employees.email'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 330.
+ 1 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `employees` (`name`, `email`, `phone`, `designation`, `salary`, `access_level`, `status`) VALUES (\'Sujal Yadav\', \'sujalyadav915@gmail.com\', \'8240880291\', \'Software Developer\', \'30000\', \'employee\', \'active\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `employees` (`name`, `email`, `phone`, `designation`, `salary`, `access_level`, `status`) VALUES (\'Sujal Yadav\', \'sujalyadav915@gmail.com\', \'8240880291\', \'Software Developer\', \'30000\', \'employee\', \'active\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2362): CodeIgniter\Database\BaseConnection->query('INSERT INTO `employees` (`name`, `email`, `phone`, `designation`, `salary`, `access_level`, `status`) VALUES (:name:, :email:, :phone:, :designation:, :salary:, :access_level:, :status:)', [...], false)
+ 4 SYSTEMPATH\Model.php(358): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(671): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(752): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\EmployeeController.php(30): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->store()
+10 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-14 11:00:53 --> [Caused by] mysqli_sql_exception: Duplicate entry 'sujalyadav915@gmail.com' for key 'employees.email'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('INSERT INTO `employees` (`name`, `email`, `phone`, `designation`, `salary`, `access_level`, `status`) VALUES (\'Sujal Yadav\', \'sujalyadav915@gmail.com\', \'8240880291\', \'Software Developer\', \'30000\', \'employee\', \'active\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `employees` (`name`, `email`, `phone`, `designation`, `salary`, `access_level`, `status`) VALUES (\'Sujal Yadav\', \'sujalyadav915@gmail.com\', \'8240880291\', \'Software Developer\', \'30000\', \'employee\', \'active\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `employees` (`name`, `email`, `phone`, `designation`, `salary`, `access_level`, `status`) VALUES (\'Sujal Yadav\', \'sujalyadav915@gmail.com\', \'8240880291\', \'Software Developer\', \'30000\', \'employee\', \'active\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2362): CodeIgniter\Database\BaseConnection->query('INSERT INTO `employees` (`name`, `email`, `phone`, `designation`, `salary`, `access_level`, `status`) VALUES (:name:, :email:, :phone:, :designation:, :salary:, :access_level:, :status:)', [...], false)
+ 5 SYSTEMPATH\Model.php(358): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(671): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(752): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\EmployeeController.php(30): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->store()
+11 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-11-14 11:01:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 11:02:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 11:02:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 11:03:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 11:03:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 11:03:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 11:03:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 11:03:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 11:03:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 11:03:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 11:03:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 11:03:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-11-14 11:04:00 --> Duplicate entry 'sujalyadav915@gmail.com' for key 'employees.email'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('INSERT INTO `employees` (`name`, `email`, `phone`, `designation`, `salary`, `access_level`, `status`) VALUES (\'Sujal Yadav\', \'sujalyadav915@gmail.com\', \'8240880291\', \'Software Developer\', \'30000\', \'employee\', \'active\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `employees` (`name`, `email`, `phone`, `designation`, `salary`, `access_level`, `status`) VALUES (\'Sujal Yadav\', \'sujalyadav915@gmail.com\', \'8240880291\', \'Software Developer\', \'30000\', \'employee\', \'active\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `employees` (`name`, `email`, `phone`, `designation`, `salary`, `access_level`, `status`) VALUES (\'Sujal Yadav\', \'sujalyadav915@gmail.com\', \'8240880291\', \'Software Developer\', \'30000\', \'employee\', \'active\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2362): CodeIgniter\Database\BaseConnection->query('INSERT INTO `employees` (`name`, `email`, `phone`, `designation`, `salary`, `access_level`, `status`) VALUES (:name:, :email:, :phone:, :designation:, :salary:, :access_level:, :status:)', [...], false)
+ 5 SYSTEMPATH\Model.php(358): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(671): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(752): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\EmployeeController.php(30): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->store()
+11 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-14 11:04:00 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'sujalyadav915@gmail.com' for key 'employees.email'
+[Method: POST, Route: employee-store]
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2362): CodeIgniter\Database\BaseConnection->query('INSERT INTO `employees` (`name`, `email`, `phone`, `designation`, `salary`, `access_level`, `status`) VALUES (:name:, :email:, :phone:, :designation:, :salary:, :access_level:, :status:)', [...], false)
+ 2 SYSTEMPATH\Model.php(358): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(671): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(752): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\EmployeeController.php(30): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->store()
+ 8 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-14 11:04:00 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'sujalyadav915@gmail.com' for key 'employees.email'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 330.
+ 1 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `employees` (`name`, `email`, `phone`, `designation`, `salary`, `access_level`, `status`) VALUES (\'Sujal Yadav\', \'sujalyadav915@gmail.com\', \'8240880291\', \'Software Developer\', \'30000\', \'employee\', \'active\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `employees` (`name`, `email`, `phone`, `designation`, `salary`, `access_level`, `status`) VALUES (\'Sujal Yadav\', \'sujalyadav915@gmail.com\', \'8240880291\', \'Software Developer\', \'30000\', \'employee\', \'active\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2362): CodeIgniter\Database\BaseConnection->query('INSERT INTO `employees` (`name`, `email`, `phone`, `designation`, `salary`, `access_level`, `status`) VALUES (:name:, :email:, :phone:, :designation:, :salary:, :access_level:, :status:)', [...], false)
+ 4 SYSTEMPATH\Model.php(358): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(671): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(752): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\EmployeeController.php(30): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->store()
+10 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-14 11:04:00 --> [Caused by] mysqli_sql_exception: Duplicate entry 'sujalyadav915@gmail.com' for key 'employees.email'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('INSERT INTO `employees` (`name`, `email`, `phone`, `designation`, `salary`, `access_level`, `status`) VALUES (\'Sujal Yadav\', \'sujalyadav915@gmail.com\', \'8240880291\', \'Software Developer\', \'30000\', \'employee\', \'active\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `employees` (`name`, `email`, `phone`, `designation`, `salary`, `access_level`, `status`) VALUES (\'Sujal Yadav\', \'sujalyadav915@gmail.com\', \'8240880291\', \'Software Developer\', \'30000\', \'employee\', \'active\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `employees` (`name`, `email`, `phone`, `designation`, `salary`, `access_level`, `status`) VALUES (\'Sujal Yadav\', \'sujalyadav915@gmail.com\', \'8240880291\', \'Software Developer\', \'30000\', \'employee\', \'active\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2362): CodeIgniter\Database\BaseConnection->query('INSERT INTO `employees` (`name`, `email`, `phone`, `designation`, `salary`, `access_level`, `status`) VALUES (:name:, :email:, :phone:, :designation:, :salary:, :access_level:, :status:)', [...], false)
+ 5 SYSTEMPATH\Model.php(358): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(671): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(752): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\EmployeeController.php(30): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->store()
+11 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-11-14 11:04:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 11:04:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 11:04:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 11:04:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 11:04:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 11:07:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 11:09:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 11:09:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 11:09:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 11:09:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 11:12:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 11:13:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 11:14:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 11:14:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 11:16:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 11:16:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 11:16:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 11:16:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 11:18:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 11:22:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 11:22:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 11:22:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 11:24:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 11:29:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 11:34:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 11:35:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 12:10:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 12:10:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 12:23:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 12:23:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 12:23:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 12:23:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 12:23:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 12:23:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 12:24:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 12:24:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 12:24:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 12:25:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 12:25:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 12:25:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 12:25:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 12:25:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 12:25:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 12:25:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 12:28:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 12:28:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 12:29:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 12:29:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 12:30:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 12:30:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 12:30:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 12:30:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 12:34:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 12:38:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 12:39:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 12:40:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 12:40:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 12:40:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 12:40:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 12:40:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 12:40:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 12:41:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 12:45:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 12:47:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 12:48:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 12:49:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 12:49:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 12:50:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 12:50:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 12:54:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 12:55:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 12:55:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 12:55:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 12:55:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 12:58:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 12:58:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 12:59:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 13:00:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 13:00:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 13:00:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 13:01:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 13:02:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 13:04:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 13:04:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 13:04:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 13:04:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 13:04:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 13:05:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 13:05:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 13:06:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 13:07:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 13:07:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 13:08:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 13:08:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 13:09:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 13:09:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 13:12:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 13:12:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 13:13:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 13:13:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-14 13:13:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
