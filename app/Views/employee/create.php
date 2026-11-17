@@ -4,6 +4,24 @@
     <div class="container mt-4">
 
         <div class="card">
+            <?php if ($errors = session()->getFlashdata('errors')): ?>
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <?php if (is_array($errors)): ?>
+                    <ul>
+                        <?php foreach ($errors as $error): ?>
+                                <li><?= esc($error) ?></li>
+                        
+                        <?php endforeach; ?>
+
+                    </ul>
+                <?php else:?>
+                    <?= esc($errors)?>
+                <?php endif; ?>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            
+
+            <?php endif; ?>
             <div class="card-header d-flex justify-content-between align-items-center">
                 <h1>Add Employee</h1>
                 <a href="<?= base_url('employees') ?>" class="btn btn-danger float-end">Back</a>

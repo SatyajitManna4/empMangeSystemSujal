@@ -16,7 +16,7 @@
         <form action="<?= base_url('logout') ?>" method="POST">
             <?= csrf_field() ?>
             <?php if (session()->has('user_id')): ?>
-            <button type="submit"><a href="<?=base_url('logout')?>" class="btn btn-success me-5 text-decoration-none text-white">Logout</a></button>
+            <button type="submit" class="btn btn-success me-5 text-decoration-none text-white">Logout</button>
         <?php endif; ?>
         </form>
     </div>

@@ -32,7 +32,6 @@ class AuthController extends BaseController
 
             'password' => 'required|min_length[8]|max_length[72]',
 
-            // 'password_confirm' => 'required|matches[password]',
         ];
 
         if (! $this->validate($rules)) {
@@ -102,7 +101,7 @@ class AuthController extends BaseController
 
             return redirect()->back()
                 ->withInput()
-                ->with('error', 'Invalid email or password.');
+                ->with('errors', 'Invalid email or password.');
         }
 
         

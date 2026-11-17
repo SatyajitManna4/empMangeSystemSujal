@@ -4,6 +4,12 @@
     <div class="container mt-4">
 
         <div class="card">
+            <?php if (session()->getFlashdata('success')): ?>
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <?= esc(session()->getFlashdata('success')) ?>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            <?php endif; ?>
             <div class="card-header d-flex justify-content-center align-items-center">
                 <h1>Login</h1>
             </div>

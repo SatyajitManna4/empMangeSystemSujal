@@ -53,11 +53,11 @@ class EmployeeController extends BaseController
     public function update($id){
 
         $rules = [
-            'name' => 'required|min_length[2]|max_length[30]',
-            'email' => 'required|valid_email|is_unique[employees.email]',
-            'phone' => 'required|numeric|max_length[10]',
-            'designation' => 'required|max_length[50]',
-            'salary' => 'required|numeric|greater_than[0]'
+            'name' => 'min_length[2]|max_length[30]',
+            'email' => 'valid_email|is_not_unique[employees.email]',
+            'phone' => 'numeric|max_length[10]',
+            'designation' => 'max_length[50]',
+            'salary' => 'numeric|greater_than[0]'
         ];
 
         if(!$this->validate($rules)){
@@ -76,7 +76,7 @@ class EmployeeController extends BaseController
         ];
 
         $model->update($id, $data);
-        return redirect()->to(base_url('employees'))->with('status','Employee Updated Successfully');
+        return redirect()->to(site_url('employees'))->with('status','Employee Updated Successfully');
 
     }
     public function delete($id){
