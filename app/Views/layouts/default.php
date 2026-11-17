@@ -10,7 +10,17 @@
 
     <nav class="navbar navbar-expand-lg bg-primary d-flex justify-content-between">
       <a href="" class="text-decoration-none text-white ms-5 ">Navbar</a>
-      <button class="btn btn-success me-5"><a href="auth/login" class="text-decoration-none text-white">Login In</a></button>
+
+      <div>
+     
+        <form action="<?= base_url('logout') ?>" method="POST">
+            <?= csrf_field() ?>
+            <?php if (session()->has('user_id')): ?>
+            <button type="submit"><a href="<?=base_url('logout')?>" class="btn btn-success me-5 text-decoration-none text-white">Logout</a></button>
+        <?php endif; ?>
+        </form>
+    </div>
+
       
 </nav>
     <?= $this->renderSection('content') ?>

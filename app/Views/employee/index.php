@@ -5,7 +5,7 @@
     <div class="card">
         <div class="card-header d-flex justify-content-between align-items-center">
             <h1 class="h3 mb-0">Employee Management Portal</h1>
-            <a href="<?= base_url('employee-add') ?>" class="btn btn-primary">Add Employee</a>
+            <a href="<?= base_url('employees/add') ?>" class="btn btn-primary">Add Employee</a>
         </div>
 
         <div class="card-body">
@@ -67,9 +67,9 @@
                                     <td><?= esc($row['access_level']) ?></td>
                                     <td><?= esc($row['status']) ?></td>
                                     <td>
-                                        <a href="<?= base_url('employee/view-user/' . $row['id']) ?>" class="btn btn-sm btn-primary">View</a>
-                                        <a href="<?= base_url('employee/edit/' . $row['id']) ?>" class="btn btn-sm btn-success">Edit</a>
-                                        <a href="<?= base_url('employee/delete/' . $row['id']) ?>" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete this employee?')">Delete</a>
+                                        <a href="<?= base_url('employees/view-user/' . $row['id']) ?>" class="btn btn-sm btn-primary">View</a>
+                                        <a href="<?= base_url('employees/edit/' . $row['id']) ?>" class="btn btn-sm btn-success">Edit</a>
+                                        <a href="<?= base_url('employees/delete/' . $row['id']) ?>" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete this employee?')">Delete</a>
                                     </td>
                                 </tr>
                             <?php endforeach; ?>

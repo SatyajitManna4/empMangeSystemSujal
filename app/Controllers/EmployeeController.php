@@ -41,7 +41,7 @@ class EmployeeController extends BaseController
 
         ];
         $model->save($data);
-        return redirect()->to(base_url('employee'))->with('status','Employee Added Successfully');
+        return redirect()->to(base_url('employees'))->with('status','Employee Added Successfully');
     }
 
     public function edit($id){
@@ -76,13 +76,13 @@ class EmployeeController extends BaseController
         ];
 
         $model->update($id, $data);
-        return redirect()->to(base_url('employee'))->with('status','Employee Updated Successfully');
+        return redirect()->to(base_url('employees'))->with('status','Employee Updated Successfully');
 
     }
     public function delete($id){
         $employee = new EmployeeModel();
         $employee->delete($id);
-        return redirect()->to(base_url('employee'))->with('status','Employee Deleted Successfully');
+        return redirect()->to(base_url('employees'))->with('status','Employee Deleted Successfully');
 
     }
 
@@ -92,66 +92,10 @@ class EmployeeController extends BaseController
         return view('employee/view_emp', $data);
     }
 
-    public function login(){
-        return view('auth/login');
-    }
+    
 
-    public function doLogin(){
-        
-        $rules = [
-            'email' => 'required|valid_email|is_not_unique[employees.email]',
-            'password' => 'required|min_length[8]',
-           
-        ];
+    
 
-        if(!$this->validate($rules)){
-            return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
-        }
-
-        $email = $this->request->getPost('email');
-        $password = $this->request->getPost('password');
-
-        $model = new EmployeeModel();
-        $user = $model->where('email', $email)->fist();
-
-        if($user){
-            if(password_verify($password, $user['password'])){
-                session().set([
-                    'id' -> user['id'],
-                    'name'-> user['name'],
-                    'email'->user['email'],
-                    'logged_in' -> true
-                ]);
-                if(session()->get('logges_in') === true){
-                    return redirect->to('employee');
-                }
-            }
-            else{
-                return redirect()->back()->withInput()->with('errors', 'Invalid Email or Password');
-            }
-
-        }else{
-            return redirect()->back()->withInput()->with('errors', 'Invalid Email or Password');
-        }
-
-
-    }
-
-    public function register(){
-        return view('auth/register');
-    }
-
-    public function doRegister(){
-        $rules = [
-            'name' => 'required|min_length[2]|max_length[30]',
-            'email' => 'required|valid_email|is_not_unique[employees.email]',
-            'password' => 'required|min_length[8]',
-           
-        ];
-
-        if(!$this->validate($rules)){
-            return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
-        }
-
-    }
+   
+   
 }

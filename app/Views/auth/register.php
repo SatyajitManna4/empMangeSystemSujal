@@ -8,7 +8,9 @@
                 <h1>Register</h1>
             </div>
             <div class="card-body">
-                <form action="<?= base_url('auth/doregister') ?>" method="POST">
+                <form action="<?= base_url('register') ?>" method="POST">
+
+                <?= csrf_field() ?>
                     <div class="mb-3">
                         <label class="form-label">Name: </label>
                         <input type="text" name="name" class="form-control" placeholder="Enter your name">

@@ -4,16 +4,33 @@ use App\Controllers\EmployeeController;
 use CodeIgniter\Router\RouteCollection;
 
 /** @var RouteCollection $routes */
-$routes->get('employee', 'EmployeeController::index');
-$routes->get('employee-add', 'EmployeeController::create');
-$routes->post('employee-store', 'EmployeeController::store');
-$routes->get('employee/edit/(:num)', 'EmployeeController::edit/$1');
-$routes->post('employee/update/(:num)', 'EmployeeController::update/$1');
-$routes->get('employee/delete/(:num)', 'EmployeeController::delete/$1');
-$routes->get('employee/view-user/(:num)', 'EmployeeController::viewUser/$1');
-$routes->get('auth/login', 'EmployeeController::login');
-$routes->post('auth/dologin', 'EmployeeController::doLogin');
-$routes->get('auth/register', 'EmployeeController::register');
-$routes->post('auth/doregister', 'EmployeeController::doRegister');
+
+$routes->get('/', static function(){
+    return redirect()->to('/login');
+});
+
+$routes->get('register', 'AuthController::register');
+$routes->post('register', 'AuthController::store');
+
+$routes->get('login', 'AuthController::login');
+$routes->post('login', 'AuthController::authenticate');
+
+$routes->post('logout', 'AuthController::logout');
+
+
+$routes->group('employees/', ['filter'=>'auth'], static function($routes){
+
+$routes->get('/', 'EmployeeController::index');
+$routes->get('add', 'EmployeeController::create');
+$routes->post('store', 'EmployeeController::store');
+$routes->get('edit/(:num)', 'EmployeeController::edit/$1');
+$routes->post('update/(:num)', 'EmployeeController::update/$1');
+$routes->get('delete/(:num)', 'EmployeeController::delete/$1');
+$routes->get('view-user/(:num)', 'EmployeeController::viewUser/$1');
+
+});
+
+
+
 
 

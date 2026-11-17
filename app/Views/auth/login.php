@@ -8,8 +8,10 @@
                 <h1>Login</h1>
             </div>
             <div class="card-body">
-                <form action="<?= base_url('auth/dologin') ?>" method="POST">
+                <form action="<?= base_url('login') ?>" method="POST">
 
+                <?= csrf_field() ?>
+                
                     <div class="mb-3">
                         <label class="form-label">Email: </label>
                         <input type="email" name="email" class="form-control">
