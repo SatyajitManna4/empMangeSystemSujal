@@ -11,5 +11,9 @@ $routes->get('employee/edit/(:num)', 'EmployeeController::edit/$1');
 $routes->post('employee/update/(:num)', 'EmployeeController::update/$1');
 $routes->get('employee/delete/(:num)', 'EmployeeController::delete/$1');
 $routes->get('employee/view-user/(:num)', 'EmployeeController::viewUser/$1');
+$routes->get('auth/login', 'EmployeeController::login');
+$routes->post('auth/dologin', 'EmployeeController::doLogin');
+$routes->get('auth/register', 'EmployeeController::register');
+$routes->post('auth/doregister', 'EmployeeController::doRegister');
 
 

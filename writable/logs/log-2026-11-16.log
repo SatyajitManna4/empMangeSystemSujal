@@ -1926,3 +1926,1045 @@ WHERE `email` = :email:
 15 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 16 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
 17 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\empMangeSystemSujal\\public\\index.php')
+ERROR - 2026-11-16 07:59:41 --> Table 'intern_company_db.employee' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('SELECT 1
+FROM `employee`
+WHERE `email` = \'sujalya@gmail.com\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `employee`
+WHERE `email` = \'sujalya@gmail.com\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `employee`
+WHERE `email` = \'sujalya@gmail.com\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `employee`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\Rules.php(176): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\StrictRules\Rules.php(187): CodeIgniter\Validation\Rules->is_unique('sujalya@gmail.com', 'employee.email', [...])
+ 7 SYSTEMPATH\Validation\Validation.php(319): CodeIgniter\Validation\StrictRules\Rules->is_unique('sujalya@gmail.com', 'employee.email', [...], null, 'email')
+ 8 SYSTEMPATH\Validation\Validation.php(196): CodeIgniter\Validation\Validation->processRules('email', 'email', 'sujalya@gmail.com', [...], [...], 'email')
+ 9 SYSTEMPATH\Controller.php(135): CodeIgniter\Validation\Validation->run()
+10 APPPATH\Controllers\EmployeeController.php(28): CodeIgniter\Controller->validate([...])
+11 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->store()
+12 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+13 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+17 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\empMangeSystemSujal\\public\\index.php')
+CRITICAL - 2026-11-16 07:59:41 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'intern_company_db.employee' doesn't exist
+[Method: POST, Route: employee-store]
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `employee`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\Rules.php(176): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(187): CodeIgniter\Validation\Rules->is_unique('sujalya@gmail.com', 'employee.email', [...])
+ 4 SYSTEMPATH\Validation\Validation.php(319): CodeIgniter\Validation\StrictRules\Rules->is_unique('sujalya@gmail.com', 'employee.email', [...], null, 'email')
+ 5 SYSTEMPATH\Validation\Validation.php(196): CodeIgniter\Validation\Validation->processRules('email', 'email', 'sujalya@gmail.com', [...], [...], 'email')
+ 6 SYSTEMPATH\Controller.php(135): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\EmployeeController.php(28): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->store()
+ 9 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\empMangeSystemSujal\\public\\index.php')
+CRITICAL - 2026-11-16 07:59:41 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'intern_company_db.employee' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 330.
+ 1 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `employee`
+WHERE `email` = \'sujalya@gmail.com\'
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `employee`
+WHERE `email` = \'sujalya@gmail.com\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `employee`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Validation\Rules.php(176): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\Validation\StrictRules\Rules.php(187): CodeIgniter\Validation\Rules->is_unique('sujalya@gmail.com', 'employee.email', [...])
+ 6 SYSTEMPATH\Validation\Validation.php(319): CodeIgniter\Validation\StrictRules\Rules->is_unique('sujalya@gmail.com', 'employee.email', [...], null, 'email')
+ 7 SYSTEMPATH\Validation\Validation.php(196): CodeIgniter\Validation\Validation->processRules('email', 'email', 'sujalya@gmail.com', [...], [...], 'email')
+ 8 SYSTEMPATH\Controller.php(135): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\EmployeeController.php(28): CodeIgniter\Controller->validate([...])
+10 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->store()
+11 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\empMangeSystemSujal\\public\\index.php')
+CRITICAL - 2026-11-16 07:59:41 --> [Caused by] mysqli_sql_exception: Table 'intern_company_db.employee' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('SELECT 1
+FROM `employee`
+WHERE `email` = \'sujalya@gmail.com\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `employee`
+WHERE `email` = \'sujalya@gmail.com\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `employee`
+WHERE `email` = \'sujalya@gmail.com\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `employee`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\Rules.php(176): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\StrictRules\Rules.php(187): CodeIgniter\Validation\Rules->is_unique('sujalya@gmail.com', 'employee.email', [...])
+ 7 SYSTEMPATH\Validation\Validation.php(319): CodeIgniter\Validation\StrictRules\Rules->is_unique('sujalya@gmail.com', 'employee.email', [...], null, 'email')
+ 8 SYSTEMPATH\Validation\Validation.php(196): CodeIgniter\Validation\Validation->processRules('email', 'email', 'sujalya@gmail.com', [...], [...], 'email')
+ 9 SYSTEMPATH\Controller.php(135): CodeIgniter\Validation\Validation->run()
+10 APPPATH\Controllers\EmployeeController.php(28): CodeIgniter\Controller->validate([...])
+11 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->store()
+12 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+13 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+17 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\empMangeSystemSujal\\public\\index.php')
+DEBUG - 2026-11-16 08:02:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-11-16 08:02:27 --> Table 'intern_company_db.employee' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('SELECT 1
+FROM `employee`
+WHERE `email` = \'sujaly5@gmail.com\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `employee`
+WHERE `email` = \'sujaly5@gmail.com\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `employee`
+WHERE `email` = \'sujaly5@gmail.com\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `employee`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\Rules.php(176): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\StrictRules\Rules.php(187): CodeIgniter\Validation\Rules->is_unique('sujaly5@gmail.com', 'employee.email', [...])
+ 7 SYSTEMPATH\Validation\Validation.php(319): CodeIgniter\Validation\StrictRules\Rules->is_unique('sujaly5@gmail.com', 'employee.email', [...], null, 'email')
+ 8 SYSTEMPATH\Validation\Validation.php(196): CodeIgniter\Validation\Validation->processRules('email', 'email', 'sujaly5@gmail.com', [...], [...], 'email')
+ 9 SYSTEMPATH\Controller.php(135): CodeIgniter\Validation\Validation->run()
+10 APPPATH\Controllers\EmployeeController.php(28): CodeIgniter\Controller->validate([...])
+11 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->store()
+12 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+13 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+17 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\empMangeSystemSujal\\public\\index.php')
+CRITICAL - 2026-11-16 08:02:27 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'intern_company_db.employee' doesn't exist
+[Method: POST, Route: employee-store]
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `employee`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\Rules.php(176): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(187): CodeIgniter\Validation\Rules->is_unique('sujaly5@gmail.com', 'employee.email', [...])
+ 4 SYSTEMPATH\Validation\Validation.php(319): CodeIgniter\Validation\StrictRules\Rules->is_unique('sujaly5@gmail.com', 'employee.email', [...], null, 'email')
+ 5 SYSTEMPATH\Validation\Validation.php(196): CodeIgniter\Validation\Validation->processRules('email', 'email', 'sujaly5@gmail.com', [...], [...], 'email')
+ 6 SYSTEMPATH\Controller.php(135): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\EmployeeController.php(28): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->store()
+ 9 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\empMangeSystemSujal\\public\\index.php')
+CRITICAL - 2026-11-16 08:02:27 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'intern_company_db.employee' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 330.
+ 1 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `employee`
+WHERE `email` = \'sujaly5@gmail.com\'
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `employee`
+WHERE `email` = \'sujaly5@gmail.com\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `employee`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Validation\Rules.php(176): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\Validation\StrictRules\Rules.php(187): CodeIgniter\Validation\Rules->is_unique('sujaly5@gmail.com', 'employee.email', [...])
+ 6 SYSTEMPATH\Validation\Validation.php(319): CodeIgniter\Validation\StrictRules\Rules->is_unique('sujaly5@gmail.com', 'employee.email', [...], null, 'email')
+ 7 SYSTEMPATH\Validation\Validation.php(196): CodeIgniter\Validation\Validation->processRules('email', 'email', 'sujaly5@gmail.com', [...], [...], 'email')
+ 8 SYSTEMPATH\Controller.php(135): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\EmployeeController.php(28): CodeIgniter\Controller->validate([...])
+10 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->store()
+11 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\empMangeSystemSujal\\public\\index.php')
+CRITICAL - 2026-11-16 08:02:27 --> [Caused by] mysqli_sql_exception: Table 'intern_company_db.employee' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('SELECT 1
+FROM `employee`
+WHERE `email` = \'sujaly5@gmail.com\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `employee`
+WHERE `email` = \'sujaly5@gmail.com\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `employee`
+WHERE `email` = \'sujaly5@gmail.com\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `employee`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\Rules.php(176): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\StrictRules\Rules.php(187): CodeIgniter\Validation\Rules->is_unique('sujaly5@gmail.com', 'employee.email', [...])
+ 7 SYSTEMPATH\Validation\Validation.php(319): CodeIgniter\Validation\StrictRules\Rules->is_unique('sujaly5@gmail.com', 'employee.email', [...], null, 'email')
+ 8 SYSTEMPATH\Validation\Validation.php(196): CodeIgniter\Validation\Validation->processRules('email', 'email', 'sujaly5@gmail.com', [...], [...], 'email')
+ 9 SYSTEMPATH\Controller.php(135): CodeIgniter\Validation\Validation->run()
+10 APPPATH\Controllers\EmployeeController.php(28): CodeIgniter\Controller->validate([...])
+11 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->store()
+12 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+13 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+17 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\empMangeSystemSujal\\public\\index.php')
+ERROR - 2026-11-16 08:31:12 --> Table 'intern_company_db.employee' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('SELECT 1
+FROM `employee`
+WHERE `email` = \'sujalyadav91557@gmail.com\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `employee`
+WHERE `email` = \'sujalyadav91557@gmail.com\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `employee`
+WHERE `email` = \'sujalyadav91557@gmail.com\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `employee`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\Rules.php(176): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\StrictRules\Rules.php(187): CodeIgniter\Validation\Rules->is_unique('sujalyadav91557@gmail.com', 'employee.email', [...])
+ 7 SYSTEMPATH\Validation\Validation.php(319): CodeIgniter\Validation\StrictRules\Rules->is_unique('sujalyadav91557@gmail.com', 'employee.email', [...], null, 'email')
+ 8 SYSTEMPATH\Validation\Validation.php(196): CodeIgniter\Validation\Validation->processRules('email', 'email', 'sujalyadav91557@gmail.com', [...], [...], 'email')
+ 9 SYSTEMPATH\Controller.php(135): CodeIgniter\Validation\Validation->run()
+10 APPPATH\Controllers\EmployeeController.php(28): CodeIgniter\Controller->validate([...])
+11 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->store()
+12 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+13 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+17 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\empMangeSystemSujal\\public\\index.php')
+CRITICAL - 2026-11-16 08:31:12 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'intern_company_db.employee' doesn't exist
+[Method: POST, Route: employee-store]
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `employee`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\Rules.php(176): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(187): CodeIgniter\Validation\Rules->is_unique('sujalyadav91557@gmail.com', 'employee.email', [...])
+ 4 SYSTEMPATH\Validation\Validation.php(319): CodeIgniter\Validation\StrictRules\Rules->is_unique('sujalyadav91557@gmail.com', 'employee.email', [...], null, 'email')
+ 5 SYSTEMPATH\Validation\Validation.php(196): CodeIgniter\Validation\Validation->processRules('email', 'email', 'sujalyadav91557@gmail.com', [...], [...], 'email')
+ 6 SYSTEMPATH\Controller.php(135): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\EmployeeController.php(28): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->store()
+ 9 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\empMangeSystemSujal\\public\\index.php')
+CRITICAL - 2026-11-16 08:31:12 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'intern_company_db.employee' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 330.
+ 1 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `employee`
+WHERE `email` = \'sujalyadav91557@gmail.com\'
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `employee`
+WHERE `email` = \'sujalyadav91557@gmail.com\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `employee`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Validation\Rules.php(176): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\Validation\StrictRules\Rules.php(187): CodeIgniter\Validation\Rules->is_unique('sujalyadav91557@gmail.com', 'employee.email', [...])
+ 6 SYSTEMPATH\Validation\Validation.php(319): CodeIgniter\Validation\StrictRules\Rules->is_unique('sujalyadav91557@gmail.com', 'employee.email', [...], null, 'email')
+ 7 SYSTEMPATH\Validation\Validation.php(196): CodeIgniter\Validation\Validation->processRules('email', 'email', 'sujalyadav91557@gmail.com', [...], [...], 'email')
+ 8 SYSTEMPATH\Controller.php(135): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\EmployeeController.php(28): CodeIgniter\Controller->validate([...])
+10 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->store()
+11 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\empMangeSystemSujal\\public\\index.php')
+CRITICAL - 2026-11-16 08:31:12 --> [Caused by] mysqli_sql_exception: Table 'intern_company_db.employee' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('SELECT 1
+FROM `employee`
+WHERE `email` = \'sujalyadav91557@gmail.com\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `employee`
+WHERE `email` = \'sujalyadav91557@gmail.com\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `employee`
+WHERE `email` = \'sujalyadav91557@gmail.com\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `employee`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\Rules.php(176): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\StrictRules\Rules.php(187): CodeIgniter\Validation\Rules->is_unique('sujalyadav91557@gmail.com', 'employee.email', [...])
+ 7 SYSTEMPATH\Validation\Validation.php(319): CodeIgniter\Validation\StrictRules\Rules->is_unique('sujalyadav91557@gmail.com', 'employee.email', [...], null, 'email')
+ 8 SYSTEMPATH\Validation\Validation.php(196): CodeIgniter\Validation\Validation->processRules('email', 'email', 'sujalyadav91557@gmail.com', [...], [...], 'email')
+ 9 SYSTEMPATH\Controller.php(135): CodeIgniter\Validation\Validation->run()
+10 APPPATH\Controllers\EmployeeController.php(28): CodeIgniter\Controller->validate([...])
+11 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->store()
+12 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+13 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+17 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\empMangeSystemSujal\\public\\index.php')
+DEBUG - 2026-11-16 08:31:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 08:31:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 08:32:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 08:32:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 08:32:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-11-16 08:33:14 --> Table 'intern_company_db.employee' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('SELECT 1
+FROM `employee`
+WHERE `email` = \'sujalyadav9179005@gmail.com\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `employee`
+WHERE `email` = \'sujalyadav9179005@gmail.com\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `employee`
+WHERE `email` = \'sujalyadav9179005@gmail.com\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `employee`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\Rules.php(176): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\StrictRules\Rules.php(187): CodeIgniter\Validation\Rules->is_unique('sujalyadav9179005@gmail.com', 'employee.email', [...])
+ 7 SYSTEMPATH\Validation\Validation.php(319): CodeIgniter\Validation\StrictRules\Rules->is_unique('sujalyadav9179005@gmail.com', 'employee.email', [...], null, 'email')
+ 8 SYSTEMPATH\Validation\Validation.php(196): CodeIgniter\Validation\Validation->processRules('email', 'email', 'sujalyadav9179005@gmail.com', [...], [...], 'email')
+ 9 SYSTEMPATH\Controller.php(135): CodeIgniter\Validation\Validation->run()
+10 APPPATH\Controllers\EmployeeController.php(28): CodeIgniter\Controller->validate([...])
+11 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->store()
+12 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+13 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+17 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\empMangeSystemSujal\\public\\index.php')
+CRITICAL - 2026-11-16 08:33:14 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'intern_company_db.employee' doesn't exist
+[Method: POST, Route: employee-store]
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `employee`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\Rules.php(176): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(187): CodeIgniter\Validation\Rules->is_unique('sujalyadav9179005@gmail.com', 'employee.email', [...])
+ 4 SYSTEMPATH\Validation\Validation.php(319): CodeIgniter\Validation\StrictRules\Rules->is_unique('sujalyadav9179005@gmail.com', 'employee.email', [...], null, 'email')
+ 5 SYSTEMPATH\Validation\Validation.php(196): CodeIgniter\Validation\Validation->processRules('email', 'email', 'sujalyadav9179005@gmail.com', [...], [...], 'email')
+ 6 SYSTEMPATH\Controller.php(135): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\EmployeeController.php(28): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->store()
+ 9 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\empMangeSystemSujal\\public\\index.php')
+CRITICAL - 2026-11-16 08:33:14 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'intern_company_db.employee' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 330.
+ 1 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `employee`
+WHERE `email` = \'sujalyadav9179005@gmail.com\'
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `employee`
+WHERE `email` = \'sujalyadav9179005@gmail.com\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `employee`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Validation\Rules.php(176): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\Validation\StrictRules\Rules.php(187): CodeIgniter\Validation\Rules->is_unique('sujalyadav9179005@gmail.com', 'employee.email', [...])
+ 6 SYSTEMPATH\Validation\Validation.php(319): CodeIgniter\Validation\StrictRules\Rules->is_unique('sujalyadav9179005@gmail.com', 'employee.email', [...], null, 'email')
+ 7 SYSTEMPATH\Validation\Validation.php(196): CodeIgniter\Validation\Validation->processRules('email', 'email', 'sujalyadav9179005@gmail.com', [...], [...], 'email')
+ 8 SYSTEMPATH\Controller.php(135): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\EmployeeController.php(28): CodeIgniter\Controller->validate([...])
+10 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->store()
+11 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\empMangeSystemSujal\\public\\index.php')
+CRITICAL - 2026-11-16 08:33:14 --> [Caused by] mysqli_sql_exception: Table 'intern_company_db.employee' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('SELECT 1
+FROM `employee`
+WHERE `email` = \'sujalyadav9179005@gmail.com\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `employee`
+WHERE `email` = \'sujalyadav9179005@gmail.com\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `employee`
+WHERE `email` = \'sujalyadav9179005@gmail.com\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `employee`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\Rules.php(176): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\StrictRules\Rules.php(187): CodeIgniter\Validation\Rules->is_unique('sujalyadav9179005@gmail.com', 'employee.email', [...])
+ 7 SYSTEMPATH\Validation\Validation.php(319): CodeIgniter\Validation\StrictRules\Rules->is_unique('sujalyadav9179005@gmail.com', 'employee.email', [...], null, 'email')
+ 8 SYSTEMPATH\Validation\Validation.php(196): CodeIgniter\Validation\Validation->processRules('email', 'email', 'sujalyadav9179005@gmail.com', [...], [...], 'email')
+ 9 SYSTEMPATH\Controller.php(135): CodeIgniter\Validation\Validation->run()
+10 APPPATH\Controllers\EmployeeController.php(28): CodeIgniter\Controller->validate([...])
+11 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->store()
+12 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+13 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+17 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\empMangeSystemSujal\\public\\index.php')
+ERROR - 2026-11-16 08:34:47 --> Table 'intern_company_db.employee' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('SELECT 1
+FROM `employee`
+WHERE `email` = \'sujalyadav9179005@gmail.com\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `employee`
+WHERE `email` = \'sujalyadav9179005@gmail.com\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `employee`
+WHERE `email` = \'sujalyadav9179005@gmail.com\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `employee`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\Rules.php(176): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\StrictRules\Rules.php(187): CodeIgniter\Validation\Rules->is_unique('sujalyadav9179005@gmail.com', 'employee.email', [...])
+ 7 SYSTEMPATH\Validation\Validation.php(319): CodeIgniter\Validation\StrictRules\Rules->is_unique('sujalyadav9179005@gmail.com', 'employee.email', [...], null, 'email')
+ 8 SYSTEMPATH\Validation\Validation.php(196): CodeIgniter\Validation\Validation->processRules('email', 'email', 'sujalyadav9179005@gmail.com', [...], [...], 'email')
+ 9 SYSTEMPATH\Controller.php(135): CodeIgniter\Validation\Validation->run()
+10 APPPATH\Controllers\EmployeeController.php(28): CodeIgniter\Controller->validate([...])
+11 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->store()
+12 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+13 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+17 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\empMangeSystemSujal\\public\\index.php')
+CRITICAL - 2026-11-16 08:34:47 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'intern_company_db.employee' doesn't exist
+[Method: POST, Route: employee-store]
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `employee`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\Rules.php(176): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(187): CodeIgniter\Validation\Rules->is_unique('sujalyadav9179005@gmail.com', 'employee.email', [...])
+ 4 SYSTEMPATH\Validation\Validation.php(319): CodeIgniter\Validation\StrictRules\Rules->is_unique('sujalyadav9179005@gmail.com', 'employee.email', [...], null, 'email')
+ 5 SYSTEMPATH\Validation\Validation.php(196): CodeIgniter\Validation\Validation->processRules('email', 'email', 'sujalyadav9179005@gmail.com', [...], [...], 'email')
+ 6 SYSTEMPATH\Controller.php(135): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\EmployeeController.php(28): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->store()
+ 9 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\empMangeSystemSujal\\public\\index.php')
+CRITICAL - 2026-11-16 08:34:47 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'intern_company_db.employee' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 330.
+ 1 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `employee`
+WHERE `email` = \'sujalyadav9179005@gmail.com\'
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `employee`
+WHERE `email` = \'sujalyadav9179005@gmail.com\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `employee`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Validation\Rules.php(176): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\Validation\StrictRules\Rules.php(187): CodeIgniter\Validation\Rules->is_unique('sujalyadav9179005@gmail.com', 'employee.email', [...])
+ 6 SYSTEMPATH\Validation\Validation.php(319): CodeIgniter\Validation\StrictRules\Rules->is_unique('sujalyadav9179005@gmail.com', 'employee.email', [...], null, 'email')
+ 7 SYSTEMPATH\Validation\Validation.php(196): CodeIgniter\Validation\Validation->processRules('email', 'email', 'sujalyadav9179005@gmail.com', [...], [...], 'email')
+ 8 SYSTEMPATH\Controller.php(135): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\EmployeeController.php(28): CodeIgniter\Controller->validate([...])
+10 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->store()
+11 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\empMangeSystemSujal\\public\\index.php')
+CRITICAL - 2026-11-16 08:34:47 --> [Caused by] mysqli_sql_exception: Table 'intern_company_db.employee' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('SELECT 1
+FROM `employee`
+WHERE `email` = \'sujalyadav9179005@gmail.com\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `employee`
+WHERE `email` = \'sujalyadav9179005@gmail.com\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `employee`
+WHERE `email` = \'sujalyadav9179005@gmail.com\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `employee`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\Rules.php(176): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\StrictRules\Rules.php(187): CodeIgniter\Validation\Rules->is_unique('sujalyadav9179005@gmail.com', 'employee.email', [...])
+ 7 SYSTEMPATH\Validation\Validation.php(319): CodeIgniter\Validation\StrictRules\Rules->is_unique('sujalyadav9179005@gmail.com', 'employee.email', [...], null, 'email')
+ 8 SYSTEMPATH\Validation\Validation.php(196): CodeIgniter\Validation\Validation->processRules('email', 'email', 'sujalyadav9179005@gmail.com', [...], [...], 'email')
+ 9 SYSTEMPATH\Controller.php(135): CodeIgniter\Validation\Validation->run()
+10 APPPATH\Controllers\EmployeeController.php(28): CodeIgniter\Controller->validate([...])
+11 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->store()
+12 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+13 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+17 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\empMangeSystemSujal\\public\\index.php')
+DEBUG - 2026-11-16 08:34:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 08:45:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 08:46:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 08:46:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 08:46:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 08:46:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 08:47:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 08:47:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 08:47:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 08:47:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 08:47:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 08:47:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 08:47:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 08:47:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 08:47:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 08:47:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 08:47:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 08:47:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 08:47:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 08:47:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 08:48:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 08:48:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 08:50:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 08:50:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 08:50:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 08:50:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 08:52:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 08:52:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 08:53:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 08:53:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 08:53:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 08:53:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-11-16 09:00:57 --> ParseError: syntax error, unexpected end of file, expecting "elseif" or "else" or "endif"
+[Method: GET, Route: employee]
+in APPPATH\Views\employee\index.php on line 60.
+ 1 SYSTEMPATH\View\View.php(241): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():235}()
+ 2 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('employee/index', [], true)
+ 3 APPPATH\Controllers\EmployeeController.php(13): view('employee/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\empMangeSystemSujal\\public\\index.php')
+CRITICAL - 2026-11-16 09:03:02 --> ParseError: syntax error, unexpected end of file, expecting "elseif" or "else" or "endif"
+[Method: GET, Route: employee]
+in APPPATH\Views\employee\index.php on line 60.
+ 1 SYSTEMPATH\View\View.php(241): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():235}()
+ 2 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('employee/index', [], true)
+ 3 APPPATH\Controllers\EmployeeController.php(13): view('employee/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\empMangeSystemSujal\\public\\index.php')
+DEBUG - 2026-11-16 09:03:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-11-16 09:03:25 --> ParseError: syntax error, unexpected end of file, expecting "elseif" or "else" or "endif"
+[Method: GET, Route: employee]
+in APPPATH\Views\employee\index.php on line 60.
+ 1 SYSTEMPATH\View\View.php(241): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():235}()
+ 2 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('employee/index', [], true)
+ 3 APPPATH\Controllers\EmployeeController.php(13): view('employee/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\empMangeSystemSujal\\public\\index.php')
+DEBUG - 2026-11-16 09:07:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 09:08:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 09:10:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 09:10:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 09:10:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 09:10:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 09:10:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 09:10:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 09:11:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 09:11:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 09:11:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 09:11:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 09:11:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 09:11:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 09:11:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 09:11:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 09:11:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 09:11:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 09:11:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 09:12:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 09:13:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 09:13:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 09:15:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 09:15:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 09:15:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 09:15:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 09:16:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 09:16:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 09:18:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 09:22:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 09:22:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 09:22:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 09:24:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 09:24:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 09:28:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 09:29:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 09:29:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-11-16 09:29:10 --> ErrorException: Array to string conversion
+[Method: GET, Route: employee]
+in APPPATH\Views\employee\index.php on line 21.
+ 1 APPPATH\Views\employee\index.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\laragon\\www\\empMangeSystemSujal\\app\\Views\\employee\\index.php', 21)
+ 2 SYSTEMPATH\View\View.php(238): include('C:\\laragon\\www\\empMangeSystemSujal\\app\\Views\\employee\\index.php')
+ 3 SYSTEMPATH\View\View.php(241): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():235}()
+ 4 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('employee/index', [], true)
+ 5 APPPATH\Controllers\EmployeeController.php(13): view('employee/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\empMangeSystemSujal\\public\\index.php')
+DEBUG - 2026-11-16 09:33:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 09:33:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 09:34:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 09:34:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-11-16 09:34:07 --> ErrorException: Array to string conversion
+[Method: GET, Route: employee]
+in APPPATH\Views\employee\index.php on line 21.
+ 1 APPPATH\Views\employee\index.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\laragon\\www\\empMangeSystemSujal\\app\\Views\\employee\\index.php', 21)
+ 2 SYSTEMPATH\View\View.php(238): include('C:\\laragon\\www\\empMangeSystemSujal\\app\\Views\\employee\\index.php')
+ 3 SYSTEMPATH\View\View.php(241): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():235}()
+ 4 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('employee/index', [], true)
+ 5 APPPATH\Controllers\EmployeeController.php(13): view('employee/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\empMangeSystemSujal\\public\\index.php')
+DEBUG - 2026-11-16 09:48:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 09:48:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 09:48:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-11-16 09:48:38 --> ErrorException: Array to string conversion
+[Method: GET, Route: employee]
+in APPPATH\Views\employee\index.php on line 21.
+ 1 APPPATH\Views\employee\index.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\laragon\\www\\empMangeSystemSujal\\app\\Views\\employee\\index.php', 21)
+ 2 SYSTEMPATH\View\View.php(238): include('C:\\laragon\\www\\empMangeSystemSujal\\app\\Views\\employee\\index.php')
+ 3 SYSTEMPATH\View\View.php(241): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():235}()
+ 4 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('employee/index', [], true)
+ 5 APPPATH\Controllers\EmployeeController.php(13): view('employee/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\empMangeSystemSujal\\public\\index.php')
+DEBUG - 2026-11-16 09:50:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 09:50:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 09:51:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 09:51:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 09:55:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 09:56:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 09:56:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 09:56:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 09:56:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 09:56:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-11-16 09:57:38 --> Duplicate entry 'sujalyadav915@gmail.com' for key 'employees.email'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('UPDATE `employees` SET `name` = \'Sujal Yadav\', `email` = \'sujalyadav915@gmail.com\', `phone` = \'0824088090\', `designation` = \'Software Developer\', `salary` = \'688099.00\', `access_level` = \'employee\', `status` = \'active\'
+WHERE `employees`.`id` IN (\'24\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `employees` SET `name` = \'Sujal Yadav\', `email` = \'sujalyadav915@gmail.com\', `phone` = \'0824088090\', `designation` = \'Software Developer\', `salary` = \'688099.00\', `access_level` = \'employee\', `status` = \'active\'
+WHERE `employees`.`id` IN (\'24\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `employees` SET `name` = \'Sujal Yadav\', `email` = \'sujalyadav915@gmail.com\', `phone` = \'0824088090\', `designation` = \'Software Developer\', `salary` = \'688099.00\', `access_level` = \'employee\', `status` = \'active\'
+WHERE `employees`.`id` IN (\'24\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2540): CodeIgniter\Database\BaseConnection->query('UPDATE `employees` SET `name` = :name:, `email` = :email:, `phone` = :phone:, `designation` = :designation:, `salary` = :salary:, `access_level` = :access_level:, `status` = :status:
+WHERE `employees`.`id` IN :employees.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(409): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(728): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\EmployeeController.php(65): CodeIgniter\Model->update('24', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->update('24')
+10 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\empMangeSystemSujal\\public\\index.php')
+CRITICAL - 2026-11-16 09:57:38 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'sujalyadav915@gmail.com' for key 'employees.email'
+[Method: POST, Route: employee/update/24]
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2540): CodeIgniter\Database\BaseConnection->query('UPDATE `employees` SET `name` = :name:, `email` = :email:, `phone` = :phone:, `designation` = :designation:, `salary` = :salary:, `access_level` = :access_level:, `status` = :status:
+WHERE `employees`.`id` IN :employees.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(409): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(728): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\EmployeeController.php(65): CodeIgniter\Model->update('24', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->update('24')
+ 7 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\empMangeSystemSujal\\public\\index.php')
+CRITICAL - 2026-11-16 09:57:38 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'sujalyadav915@gmail.com' for key 'employees.email'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 330.
+ 1 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `employees` SET `name` = \'Sujal Yadav\', `email` = \'sujalyadav915@gmail.com\', `phone` = \'0824088090\', `designation` = \'Software Developer\', `salary` = \'688099.00\', `access_level` = \'employee\', `status` = \'active\'
+WHERE `employees`.`id` IN (\'24\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `employees` SET `name` = \'Sujal Yadav\', `email` = \'sujalyadav915@gmail.com\', `phone` = \'0824088090\', `designation` = \'Software Developer\', `salary` = \'688099.00\', `access_level` = \'employee\', `status` = \'active\'
+WHERE `employees`.`id` IN (\'24\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2540): CodeIgniter\Database\BaseConnection->query('UPDATE `employees` SET `name` = :name:, `email` = :email:, `phone` = :phone:, `designation` = :designation:, `salary` = :salary:, `access_level` = :access_level:, `status` = :status:
+WHERE `employees`.`id` IN :employees.id:', [...], false)
+ 4 SYSTEMPATH\Model.php(409): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(728): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Controllers\EmployeeController.php(65): CodeIgniter\Model->update('24', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->update('24')
+ 9 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\empMangeSystemSujal\\public\\index.php')
+CRITICAL - 2026-11-16 09:57:38 --> [Caused by] mysqli_sql_exception: Duplicate entry 'sujalyadav915@gmail.com' for key 'employees.email'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('UPDATE `employees` SET `name` = \'Sujal Yadav\', `email` = \'sujalyadav915@gmail.com\', `phone` = \'0824088090\', `designation` = \'Software Developer\', `salary` = \'688099.00\', `access_level` = \'employee\', `status` = \'active\'
+WHERE `employees`.`id` IN (\'24\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `employees` SET `name` = \'Sujal Yadav\', `email` = \'sujalyadav915@gmail.com\', `phone` = \'0824088090\', `designation` = \'Software Developer\', `salary` = \'688099.00\', `access_level` = \'employee\', `status` = \'active\'
+WHERE `employees`.`id` IN (\'24\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `employees` SET `name` = \'Sujal Yadav\', `email` = \'sujalyadav915@gmail.com\', `phone` = \'0824088090\', `designation` = \'Software Developer\', `salary` = \'688099.00\', `access_level` = \'employee\', `status` = \'active\'
+WHERE `employees`.`id` IN (\'24\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2540): CodeIgniter\Database\BaseConnection->query('UPDATE `employees` SET `name` = :name:, `email` = :email:, `phone` = :phone:, `designation` = :designation:, `salary` = :salary:, `access_level` = :access_level:, `status` = :status:
+WHERE `employees`.`id` IN :employees.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(409): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(728): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\EmployeeController.php(65): CodeIgniter\Model->update('24', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->update('24')
+10 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\empMangeSystemSujal\\public\\index.php')
+DEBUG - 2026-11-16 10:00:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 10:00:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 10:13:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 10:14:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 10:56:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 11:43:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 11:43:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 11:43:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-11-16 11:55:53 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "<="
+[Method: GET, Route: auth/%3C=]
+in SYSTEMPATH\Router\Router.php on line 766.
+ 1 SYSTEMPATH\Router\Router.php(215): CodeIgniter\Router\Router->checkDisallowedChars('auth/<=')
+ 2 SYSTEMPATH\CodeIgniter.php(850): CodeIgniter\Router\Router->handle('auth/<=')
+ 3 SYSTEMPATH\CodeIgniter.php(462): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\empMangeSystemSujal\\public\\index.php')
+CRITICAL - 2026-11-16 11:57:28 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "<="
+[Method: GET, Route: auth/%3C=]
+in SYSTEMPATH\Router\Router.php on line 766.
+ 1 SYSTEMPATH\Router\Router.php(215): CodeIgniter\Router\Router->checkDisallowedChars('auth/<=')
+ 2 SYSTEMPATH\CodeIgniter.php(850): CodeIgniter\Router\Router->handle('auth/<=')
+ 3 SYSTEMPATH\CodeIgniter.php(462): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\empMangeSystemSujal\\public\\index.php')
+CRITICAL - 2026-11-16 11:57:33 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "<="
+[Method: GET, Route: auth/%3C=]
+in SYSTEMPATH\Router\Router.php on line 766.
+ 1 SYSTEMPATH\Router\Router.php(215): CodeIgniter\Router\Router->checkDisallowedChars('auth/<=')
+ 2 SYSTEMPATH\CodeIgniter.php(850): CodeIgniter\Router\Router->handle('auth/<=')
+ 3 SYSTEMPATH\CodeIgniter.php(462): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\empMangeSystemSujal\\public\\index.php')
+CRITICAL - 2026-11-16 11:58:35 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "<="
+[Method: GET, Route: auth/%3C=]
+in SYSTEMPATH\Router\Router.php on line 766.
+ 1 SYSTEMPATH\Router\Router.php(215): CodeIgniter\Router\Router->checkDisallowedChars('auth/<=')
+ 2 SYSTEMPATH\CodeIgniter.php(850): CodeIgniter\Router\Router->handle('auth/<=')
+ 3 SYSTEMPATH\CodeIgniter.php(462): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\empMangeSystemSujal\\public\\index.php')
+DEBUG - 2026-11-16 12:02:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 12:04:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 12:06:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 12:06:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 12:06:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 12:30:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 12:31:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-11-16 12:31:45 --> Error: Call to undefined method App\Controllers\EmployeeController::request()
+[Method: POST, Route: auth/dologin]
+in APPPATH\Controllers\EmployeeController.php on line 100.
+ 1 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->doLogin()
+ 2 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\empMangeSystemSujal\\public\\index.php')
+DEBUG - 2026-11-16 12:35:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-11-16 12:36:02 --> Table 'intern_company_db.employee' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('SELECT 1
+FROM `employee`
+WHERE `email` = \'sujalyadav915@gmail.com\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `employee`
+WHERE `email` = \'sujalyadav915@gmail.com\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `employee`
+WHERE `email` = \'sujalyadav915@gmail.com\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `employee`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\Rules.php(132): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\StrictRules\Rules.php(147): CodeIgniter\Validation\Rules->is_not_unique('sujalyadav915@gmail.com', 'employee.email', [...])
+ 7 SYSTEMPATH\Validation\Validation.php(319): CodeIgniter\Validation\StrictRules\Rules->is_not_unique('sujalyadav915@gmail.com', 'employee.email', [...], null, 'email')
+ 8 SYSTEMPATH\Validation\Validation.php(196): CodeIgniter\Validation\Validation->processRules('email', 'email', 'sujalyadav915@gmail.com', [...], [...], 'email')
+ 9 SYSTEMPATH\Controller.php(135): CodeIgniter\Validation\Validation->run()
+10 APPPATH\Controllers\EmployeeController.php(108): CodeIgniter\Controller->validate([...])
+11 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->doLogin()
+12 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+13 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+17 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\empMangeSystemSujal\\public\\index.php')
+CRITICAL - 2026-11-16 12:36:02 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'intern_company_db.employee' doesn't exist
+[Method: POST, Route: auth/dologin]
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `employee`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\Rules.php(132): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(147): CodeIgniter\Validation\Rules->is_not_unique('sujalyadav915@gmail.com', 'employee.email', [...])
+ 4 SYSTEMPATH\Validation\Validation.php(319): CodeIgniter\Validation\StrictRules\Rules->is_not_unique('sujalyadav915@gmail.com', 'employee.email', [...], null, 'email')
+ 5 SYSTEMPATH\Validation\Validation.php(196): CodeIgniter\Validation\Validation->processRules('email', 'email', 'sujalyadav915@gmail.com', [...], [...], 'email')
+ 6 SYSTEMPATH\Controller.php(135): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\EmployeeController.php(108): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->doLogin()
+ 9 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\empMangeSystemSujal\\public\\index.php')
+CRITICAL - 2026-11-16 12:36:02 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'intern_company_db.employee' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 330.
+ 1 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `employee`
+WHERE `email` = \'sujalyadav915@gmail.com\'
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `employee`
+WHERE `email` = \'sujalyadav915@gmail.com\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `employee`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Validation\Rules.php(132): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\Validation\StrictRules\Rules.php(147): CodeIgniter\Validation\Rules->is_not_unique('sujalyadav915@gmail.com', 'employee.email', [...])
+ 6 SYSTEMPATH\Validation\Validation.php(319): CodeIgniter\Validation\StrictRules\Rules->is_not_unique('sujalyadav915@gmail.com', 'employee.email', [...], null, 'email')
+ 7 SYSTEMPATH\Validation\Validation.php(196): CodeIgniter\Validation\Validation->processRules('email', 'email', 'sujalyadav915@gmail.com', [...], [...], 'email')
+ 8 SYSTEMPATH\Controller.php(135): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\EmployeeController.php(108): CodeIgniter\Controller->validate([...])
+10 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->doLogin()
+11 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\empMangeSystemSujal\\public\\index.php')
+CRITICAL - 2026-11-16 12:36:02 --> [Caused by] mysqli_sql_exception: Table 'intern_company_db.employee' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('SELECT 1
+FROM `employee`
+WHERE `email` = \'sujalyadav915@gmail.com\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `employee`
+WHERE `email` = \'sujalyadav915@gmail.com\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `employee`
+WHERE `email` = \'sujalyadav915@gmail.com\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `employee`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\Rules.php(132): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\StrictRules\Rules.php(147): CodeIgniter\Validation\Rules->is_not_unique('sujalyadav915@gmail.com', 'employee.email', [...])
+ 7 SYSTEMPATH\Validation\Validation.php(319): CodeIgniter\Validation\StrictRules\Rules->is_not_unique('sujalyadav915@gmail.com', 'employee.email', [...], null, 'email')
+ 8 SYSTEMPATH\Validation\Validation.php(196): CodeIgniter\Validation\Validation->processRules('email', 'email', 'sujalyadav915@gmail.com', [...], [...], 'email')
+ 9 SYSTEMPATH\Controller.php(135): CodeIgniter\Validation\Validation->run()
+10 APPPATH\Controllers\EmployeeController.php(108): CodeIgniter\Controller->validate([...])
+11 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->doLogin()
+12 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+13 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+17 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\empMangeSystemSujal\\public\\index.php')
+DEBUG - 2026-11-16 12:36:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 12:36:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 12:36:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 12:36:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 12:36:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-11-16 12:38:22 --> ParseError: syntax error, unexpected end of file, expecting "elseif" or "else" or "endif"
+[Method: GET, Route: auth/login]
+in APPPATH\Views\auth\login.php on line 44.
+ 1 SYSTEMPATH\View\View.php(241): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():235}()
+ 2 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('auth/login', [], true)
+ 3 APPPATH\Controllers\EmployeeController.php(96): view('auth/login')
+ 4 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->login()
+ 5 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\empMangeSystemSujal\\public\\index.php')
+CRITICAL - 2026-11-16 12:38:26 --> ParseError: syntax error, unexpected end of file, expecting "elseif" or "else" or "endif"
+[Method: GET, Route: auth/login]
+in APPPATH\Views\auth\login.php on line 44.
+ 1 SYSTEMPATH\View\View.php(241): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():235}()
+ 2 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('auth/login', [], true)
+ 3 APPPATH\Controllers\EmployeeController.php(96): view('auth/login')
+ 4 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\EmployeeController->login()
+ 5 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\empMangeSystemSujal\\public\\index.php')
+DEBUG - 2026-11-16 12:38:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 12:38:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 12:39:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 12:40:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 12:40:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 12:40:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 12:42:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 12:45:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 12:45:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 12:45:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 12:45:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 12:46:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 12:46:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 12:46:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 12:47:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 12:47:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 12:47:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 12:47:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 12:48:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 12:48:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 12:48:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 12:49:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 12:54:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 12:54:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 12:54:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 12:54:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 12:54:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 12:54:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 12:55:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 12:55:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 12:55:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 12:56:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-16 12:56:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

@@ -10,7 +10,7 @@
 
     <nav class="navbar navbar-expand-lg bg-primary d-flex justify-content-between">
       <a href="" class="text-decoration-none text-white ms-5 ">Navbar</a>
-      <button class="btn btn-success me-5"><a href="" class="text-decoration-none text-white">Login In</a></button>
+      <button class="btn btn-success me-5"><a href="auth/login" class="text-decoration-none text-white">Login In</a></button>
       
 </nav>
     <?= $this->renderSection('content') ?>
